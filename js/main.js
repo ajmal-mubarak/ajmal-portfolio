@@ -45,18 +45,28 @@
    // Burger Menu
 	var burgerMenu = function() {
 
+		// Toggle menu on burger click
 		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
+			event.stopPropagation();
 			event.preventDefault();
+			$(this).toggleClass('active');
+			$('#ftco-nav').collapse('toggle');
+		});
 
-			if ( $('#ftco-nav').is(':visible') ) {
-				$(this).removeClass('active');
-			} else {
-				$(this).addClass('active');	
+		// Close menu when clicking OUTSIDE the navbar
+		$(document).on('click', function(event) {
+			var $nav = $('#ftco-nav');
+			var $toggler = $('.js-fh5co-nav-toggle');
+			if ($nav.hasClass('show') && !$nav.is(event.target) && $nav.has(event.target).length === 0 && !$toggler.is(event.target) && $toggler.has(event.target).length === 0) {
+				$nav.collapse('hide');
+				$toggler.removeClass('active');
 			}
+		});
 
-			
-			
+		// Close menu when a nav link is clicked
+		$('#ftco-nav .nav-link').on('click', function() {
+			$('#ftco-nav').collapse('hide');
+			$('.js-fh5co-nav-toggle').removeClass('active');
 		});
 
 	};
