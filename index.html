@@ -1246,7 +1246,7 @@ ajmal = <span class="c-class">Developer</span>()
 						{ text: 'api = rest_api.Client(version="v2")', isCmd: true },
 						{ text: 'api.authenticate(token="AJ_SEC")', isCmd: true },
 						{ text: 'api.connect_endpoints()', isCmd: true },
-						{ text: 'INFO: Connection secure (200 OK)', isOutput: true, delay: 75 },
+						{ text: 'INFO: Connection secure (200 OK)', isOutput: true, delay: 40 },
 						{ text: '✓ Rest API connected (90%)', isSuccess: true }
 					],
 					color: '168, 85, 247'
@@ -1259,7 +1259,7 @@ ajmal = <span class="c-class">Developer</span>()
 						{ text: 'app = react.create_root("#root")', isCmd: true },
 						{ text: 'app.load_modules(lazy=True)', isCmd: true },
 						{ text: 'app.render_layout()', isCmd: true },
-						{ text: 'INFO: Mounting React UI Tree...', isOutput: true, delay: 75 },
+						{ text: 'INFO: Mounting React UI Tree...', isOutput: true, delay: 40 },
 						{ text: '✓ React UI mounted (85%)', isSuccess: true }
 					],
 					color: '97, 218, 251'
@@ -1271,8 +1271,8 @@ ajmal = <span class="c-class">Developer</span>()
 						{ text: 'import html5_parser', isCmd: true },
 						{ text: 'dom = html5_parser.parse("index.html")', isCmd: true },
 						{ text: 'dom.validate_semantic_tags()', isCmd: true },
-						{ text: 'INFO: Analyzing semantic tags...', isOutput: true, delay: 60 },
-						{ text: 'INFO: Document structure validated.', isOutput: true, delay: 60 },
+						{ text: 'INFO: Analyzing semantic tags...', isOutput: true, delay: 35 },
+						{ text: 'INFO: Document structure validated.', isOutput: true, delay: 35 },
 						{ text: '✓ HTML5 layout loaded (95%)', isSuccess: true }
 					],
 					color: '227, 79, 38'
@@ -1284,8 +1284,8 @@ ajmal = <span class="c-class">Developer</span>()
 						{ text: 'import css3_compiler', isCmd: true },
 						{ text: 'css3_compiler.load_styles()', isCmd: true },
 						{ text: 'css3_compiler.compile_sass(minify=True)', isCmd: true },
-						{ text: 'INFO: Resolving flexbox & grid layers...', isOutput: true, delay: 75 },
-						{ text: 'INFO: Media queries compiled.', isOutput: true, delay: 60 },
+						{ text: 'INFO: Resolving flexbox & grid layers...', isOutput: true, delay: 35 },
+						{ text: 'INFO: Media queries compiled.', isOutput: true, delay: 35 },
 						{ text: '✓ CSS3 styling active (95%)', isSuccess: true }
 					],
 					color: '33, 150, 243'
@@ -1298,7 +1298,7 @@ ajmal = <span class="c-class">Developer</span>()
 						{ text: 'django.setup_db_migrations()', isCmd: true },
 						{ text: 'django.run_migrations(db="prod")', isCmd: true },
 						{ text: 'django.start_server(port=8000)', isCmd: true },
-						{ text: 'INFO: Server running on localhost:8000', isOutput: true, delay: 90 },
+						{ text: 'INFO: Server running on localhost:8000', isOutput: true, delay: 40 },
 						{ text: '✓ Django backend active (90%)', isSuccess: true }
 					],
 					color: '9, 162, 105'
@@ -1311,7 +1311,7 @@ ajmal = <span class="c-class">Developer</span>()
 						{ text: 'app = fastapi.FastAPI()', isCmd: true },
 						{ text: 'fastapi.load_routers(app)', isCmd: true },
 						{ text: 'fastapi.serve(app, host="0.0.0.0")', isCmd: true },
-						{ text: 'INFO: Started server worker [18492]', isOutput: true, delay: 75 },
+						{ text: 'INFO: Started server worker [18492]', isOutput: true, delay: 40 },
 						{ text: '✓ FastAPI worker running (85%)', isSuccess: true }
 					],
 					color: '0, 150, 136'
@@ -1320,12 +1320,15 @@ ajmal = <span class="c-class">Developer</span>()
 
 			const termBody = document.getElementById('terminal-body');
 			const gridWrapper = document.getElementById('skills-grid');
+			const skillsSection = document.getElementById('skills-section');
 			let skillIndex = 0;
+			let animationStarted = false;
 
 			function sleep(ms) {
 				return new Promise(resolve => setTimeout(resolve, ms));
 			}
 
+			// Typing: 10ms per character
 			async function typeText(element, text, speed = 10) {
 				for (let i = 0; i < text.length; i++) {
 					element.textContent += text[i];
@@ -1334,83 +1337,85 @@ ajmal = <span class="c-class">Developer</span>()
 			}
 
 			async function runTerminalLoop() {
-				await sleep(800);
-				
+				await sleep(500);
+
 				while (true) {
 					const skill = skillsData[skillIndex];
 					const cardEl = document.getElementById('card-' + skill.id);
 					const card = cardEl ? cardEl.querySelector('.skill-card') : null;
 
-					// Clear terminal screen before starting the new technology's code compilation
+					// Clear terminal screen before starting next technology
 					termBody.innerHTML = '';
-					await sleep(50);
+					await sleep(25);
 
 					// Print each line in the terminal
 					for (const line of skill.lines) {
 						if (line.isCmd) {
-							// Command line typing
 							const cmdLine = document.createElement('div');
 							cmdLine.className = 'term-line';
-							cmdLine.innerHTML = `<span class="term-prompt">>>> </span><span class="term-keyword">${line.text.startsWith('import') ? 'import' : ''}</span>&nbsp;<span class="term-typing-text"></span><span class="term-cursor"></span>`;
+							const isImport = line.text.startsWith('import');
+							const textToType = isImport ? line.text.substring(7) : line.text;
+							cmdLine.innerHTML = `<span class="term-prompt">>>> </span>${isImport ? '<span class="term-keyword">import</span>&nbsp;' : ''}<span class="term-typing-text"></span><span class="term-cursor"></span>`;
 							termBody.appendChild(cmdLine);
-							
 							const textSpan = cmdLine.querySelector('.term-typing-text');
 							const cursor = cmdLine.querySelector('.term-cursor');
-							
-							// slice out keyword if typing 'import X'
-							const textToType = line.text.startsWith('import') ? line.text.substring(7) : line.text;
 							await typeText(textSpan, textToType, 10);
 							cursor.remove();
-							await sleep(40);
+							await sleep(18);
 						} else if (line.isOutput) {
-							// Standard output line
 							const outLine = document.createElement('div');
 							outLine.className = 'term-line';
 							outLine.style.color = '#71717a';
 							outLine.textContent = line.text;
 							termBody.appendChild(outLine);
 							termBody.scrollTop = termBody.scrollHeight;
-							await sleep(line.delay || 75);
+							await sleep(line.delay || 50);
 						} else if (line.isSuccess) {
-							// Final success output line
 							const successLine = document.createElement('div');
 							successLine.className = 'term-output';
 							successLine.style.color = `rgb(${skill.color})`;
 							successLine.textContent = line.text;
 							termBody.appendChild(successLine);
-							
-							// Force reflow and show output
-							setTimeout(() => successLine.classList.add('show'), 15);
+							setTimeout(() => successLine.classList.add('show'), 10);
 							termBody.scrollTop = termBody.scrollHeight;
-							await sleep(50);
+							await sleep(25);
 						}
 					}
 
-					// Reveal & Activate corresponding skill card on the right
+					// Reveal & Activate the corresponding skill card
 					if (gridWrapper) gridWrapper.classList.add('has-active');
-					if (card) {
-						card.classList.add('revealed', 'active');
-					}
+					if (card) card.classList.add('revealed', 'active');
 
-					// Auto-scroll terminal to bottom
 					termBody.scrollTop = termBody.scrollHeight;
 
-					// Wait while card is active/glowing (made faster)
-					await sleep(800);
+					// Hold glow briefly
+					await sleep(650);
 
-					// Deactivate active glow/scaling, but KEEP the card revealed ('dont hide')
+					// Remove active glow but keep card revealed
 					if (card) card.classList.remove('active');
 
-					// Advance index
+					// Advance to next skill
 					skillIndex = (skillIndex + 1) % skillsData.length;
-					
-					// Wait a short time before compiling the next skill
-					await sleep(200);
+					await sleep(140);
 				}
 			}
 
-			// Start terminal execution loop
-			runTerminalLoop();
+			// Only start when skills section enters viewport (30% visible)
+			if (skillsSection && 'IntersectionObserver' in window) {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting && !animationStarted) {
+							animationStarted = true;
+							observer.disconnect();
+							runTerminalLoop();
+						}
+					});
+				}, { threshold: 0.3 });
+				observer.observe(skillsSection);
+			} else {
+				// Fallback for older browsers
+				runTerminalLoop();
+			}
 		});
 	</script>
 
