@@ -13242,7 +13242,7 @@ textarea.form-control {
   letter-spacing: 3px;
 }
 
-.heading-section h1.big {
+.heading-section .big {
   position: absolute;
   top: 0px;
   left: 0;
@@ -13252,7 +13252,7 @@ textarea.form-control {
   font-weight: 900;
 }
 
-.heading-section h1.big.big-2 {
+.heading-section .big.big-2 {
   right: 0;
 }
 
