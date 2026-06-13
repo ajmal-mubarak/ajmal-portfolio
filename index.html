@@ -16,7 +16,7 @@
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://ajmal-portfolio-nu.vercel.app/">
 	<meta property="og:title" content="Ajmal Mubarak | Python Full Stack Web Developer Portfolio">
-	<meta property="og:description" content="Explore the portfolio of Ajmal Mubarak, featuring web development services, skills, resume, and recent projects in React, Python, Django, and Web Design.">
+	<meta property="og:description" content="Explore the portfolio of Ajmal Mubarak, featuring web development services, skills, resume, and recent projects in React, Python, Django, and SEO Optimisation.">
 	<meta property="og:image" content="https://ajmal-portfolio-nu.vercel.app/images/about.jpg">
 	<meta property="og:site_name" content="Ajmal Mubarak Portfolio">
 
@@ -24,7 +24,7 @@
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://ajmal-portfolio-nu.vercel.app/">
 	<meta property="twitter:title" content="Ajmal Mubarak | Python Full Stack Web Developer Portfolio">
-	<meta property="twitter:description" content="Explore the portfolio of Ajmal Mubarak, featuring web development services, skills, resume, and recent projects in React, Python, Django, and Web Design.">
+	<meta property="twitter:description" content="Explore the portfolio of Ajmal Mubarak, featuring web development services, skills, resume, and recent projects in React, Python, Django, and SEO Optimisation.">
 	<meta property="twitter:image" content="https://ajmal-portfolio-nu.vercel.app/images/about.jpg">
 
 	<!-- JSON-LD Structured Data for Person -->
@@ -50,7 +50,8 @@
 	    "Frontend Development",
 	    "Backend Development",
 	    "HTML5",
-	    "CSS3"
+	    "CSS3",
+	    "SEO Optimisation"
 	  ],
 	  "address": {
 	    "@type": "PostalAddress",
@@ -79,6 +80,7 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/service-cards.css?v=1.2">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -364,7 +366,7 @@ ajmal = <span class="c-class">Developer</span>()
 
 	<section class="ftco-section" id="services-section">
 		<div class="container">
-			<div class="row justify-content-center py-5 mt-5">
+			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<span class="big big-2">Services</span>
 					<h2 class="mb-4">Services</h2>
@@ -375,36 +377,151 @@ ajmal = <span class="c-class">Developer</span>()
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+				<!-- Service 1: SEO Optimisation -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="services-1">
+						<div class="card-animation-area">
+							<div class="anim-seo-google">
+								<div class="browser-header">
+									<div class="browser-dots">
+										<span class="dot red"></span>
+										<span class="dot yellow"></span>
+										<span class="dot green"></span>
+									</div>
+									<div class="browser-search-bar">
+										<span class="google-logo"><span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span></span>
+										<div class="search-input-mock">
+											<span class="search-text-typed">seo optimisation</span>
+										</div>
+									</div>
+								</div>
+								<div class="browser-content">
+									<div class="search-results-mock">
+										<div class="result-card rank-2">
+											<div class="result-url-skeleton"></div>
+											<div class="result-title-skeleton"></div>
+											<div class="result-snippet-skeleton"></div>
+										</div>
+										<div class="result-card ajmal-site">
+											<div class="result-header-row">
+												<span class="badge-number">#1</span>
+												<span class="result-url">ajmal-portfolio.dev</span>
+											</div>
+											<div class="result-title">Ajmal Mubarak - #1 SEO Expert</div>
+											<div class="result-snippet">Top ranking search optimization, speed optimization, and semantic code.</div>
+										</div>
+										<div class="result-card rank-3">
+											<div class="result-url-skeleton"></div>
+											<div class="result-title-skeleton"></div>
+											<div class="result-snippet-skeleton"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<span class="icon">
 							<i class="flaticon-analysis"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Web Design</h3>
+							<h3>SEO Optimisation</h3>
+							<p class="card-desc-text">Optimizing search engine rankings, increasing search visibility, speed auditing, and driving organic traffic to your website.</p>
 						</div>
-					</a>
+					</div>
 				</div>
-				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+
+				<!-- Service 2: Web Developer -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="services-1">
+						<div class="card-animation-area">
+							<div class="anim-web-dev">
+								<div class="editor-header">
+									<div class="browser-dots">
+										<span class="dot red"></span>
+										<span class="dot yellow"></span>
+										<span class="dot green"></span>
+									</div>
+									<span class="editor-tab-name">main.py</span>
+								</div>
+								<div class="editor-body">
+									<div class="code-area">
+										<div class="code-line"><span class="c-keyword">import</span> django</div>
+										<div class="code-line"><span class="c-keyword">def</span> <span class="c-func">deploy</span>():</div>
+										<div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-line-typed">print("App live!")</span></div>
+									</div>
+									<div class="terminal-area">
+										<div class="terminal-prompt">$ python manage.py runserver</div>
+										<div class="terminal-loader">
+											<div class="spinner"></div>
+											<span class="load-text">Starting server...</span>
+										</div>
+										<div class="terminal-success">⚡ Active on port 8000 (Success)</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<span class="icon">
 							<i class="flaticon-ideas"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Web Developer</h3>
+							<h3>Web Developer</h3>
+							<p class="card-desc-text">Crafting high-performance backends and frontends using Python, Django, REST APIs, and modern frameworks.</p>
 						</div>
-					</a>
+					</div>
 				</div>
 
-				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+				<!-- Service 3: Web App -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="services-1">
+						<div class="card-animation-area">
+							<div class="anim-web-app">
+								<div class="dashboard-header">
+									<div class="browser-dots">
+										<span class="dot red"></span>
+										<span class="dot yellow"></span>
+										<span class="dot green"></span>
+									</div>
+									<span class="dashboard-title">admin_dashboard.js</span>
+								</div>
+								<div class="dashboard-body">
+									<div class="dashboard-grid">
+										<div class="dash-card chart-card">
+											<span class="card-label">Traffic</span>
+											<div class="chart-bars">
+												<div class="bar bar-1"></div>
+												<div class="bar bar-2"></div>
+												<div class="bar bar-3"></div>
+												<div class="bar bar-4"></div>
+												<div class="bar bar-5"></div>
+											</div>
+										</div>
+										<div class="dash-card metrics-card">
+											<div class="metric-item">
+												<span class="metric-label">Users</span>
+												<span class="metric-value user-counter"></span>
+											</div>
+											<div class="metric-item">
+												<span class="metric-label">Revenue</span>
+												<span class="metric-value revenue-pct"></span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard-sync">
+										<svg class="sync-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+											<path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+										</svg>
+										<span>Syncing cloud database...</span>
+									</div>
+								</div>
+							</div>
+						</div>
 						<span class="icon">
 							<i class="flaticon-analysis"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Web app</h3>
+							<h3>Web App</h3>
+							<p class="card-desc-text">Developing secure, interactive, and customized full-stack dashboards and platform applications for business growth.</p>
 						</div>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -422,69 +539,295 @@ ajmal = <span class="c-class">Developer</span>()
 						experiences.</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Rest API</h3>
-						<div class="progress">
-							<div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-								aria-valuemax="100" style="width:90%">
-								<span>90%</span>
+			<div class="row align-items-center">
+				<!-- Left Column: skills.py IDE Terminal -->
+				<div class="col-lg-5 col-12 mb-5 mb-lg-0 ftco-animate">
+					<div class="skills-terminal">
+						<div class="terminal-header">
+							<div class="browser-dots">
+								<span class="dot red"></span>
+								<span class="dot yellow"></span>
+								<span class="dot green"></span>
+							</div>
+							<span class="terminal-title">skills.py</span>
+						</div>
+						<div class="terminal-body" id="terminal-body">
+							<!-- Animated text will be injected here via Javascript -->
+							<div class="term-line" id="current-line">
+								<span class="term-prompt">>>> </span><span class="term-typing" id="term-typing-text"></span><span class="term-cursor"></span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>React</h3>
-						<div class="progress">
-							<div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-								aria-valuemax="100" style="width:85%">
-								<span>85%</span>
+
+				<!-- Right Column: Skills Cards Grid -->
+				<div class="col-lg-7 col-12">
+					<div class="skills-grid-wrapper row" id="skills-grid">
+						<!-- Skill 1: Rest API -->
+						<div class="col-md-4 col-6 mb-3 d-flex ftco-animate" id="card-rest">
+							<div class="skill-card" style="--skill-color: 168, 85, 247; --skill-pct: 90%;">
+								<div class="card-corner tl"></div>
+								<div class="card-corner br"></div>
+								<span class="card-index">01</span>
+								
+								<div class="card-header-row">
+									<div class="skill-logo-box">
+										<div class="skill-logo skill-logo-rest">
+											<svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2">
+												<rect x="2" y="2" width="8" height="6" rx="1" fill="#a855f7" fill-opacity="0.15"/>
+												<rect x="14" y="2" width="8" height="6" rx="1" fill="#a855f7" fill-opacity="0.15"/>
+												<rect x="8" y="16" width="8" height="6" rx="1" fill="#a855f7" fill-opacity="0.15"/>
+												<path d="M6 8v4h12V8M12 12v4"/>
+											</svg>
+										</div>
+										<span class="logo-dot"></span>
+									</div>
+									<div class="skill-header-info">
+										<span class="skill-category">BACKEND</span>
+										<h4 class="skill-name">Rest API</h4>
+									</div>
+								</div>
+								
+								<div class="card-progress-row">
+									<div class="progress-bar-track">
+										<div class="progress-bar-fill"></div>
+									</div>
+									<span class="skill-percentage">90%</span>
+								</div>
+								
+								<div class="card-footer-row">
+									<div class="skill-tags">
+										<span class="skill-tag">APIS</span>
+										<span class="skill-tag">OAUTH</span>
+									</div>
+									<div class="active-indicator">
+										<span class="indicator-dot"></span>
+										<span class="indicator-text">ACTIVE</span>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>HTML5</h3>
-						<div class="progress">
-							<div class="progress-bar color-3" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-								aria-valuemax="100" style="width:95%">
-								<span>95%</span>
+
+						<!-- Skill 2: React -->
+						<div class="col-md-4 col-6 mb-3 d-flex ftco-animate" id="card-react">
+							<div class="skill-card" style="--skill-color: 97, 218, 251; --skill-pct: 85%;">
+								<div class="card-corner tl"></div>
+								<div class="card-corner br"></div>
+								<span class="card-index">02</span>
+								
+								<div class="card-header-row">
+									<div class="skill-logo-box">
+										<div class="skill-logo skill-logo-react">
+											<svg viewBox="-11.5 -10.23174 23 20.46348">
+												<circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+												<g stroke="#61dafb" stroke-width="1.2" fill="none">
+													<ellipse rx="11" ry="4.2"/>
+													<ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+													<ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+												</g>
+											</svg>
+										</div>
+										<span class="logo-dot"></span>
+									</div>
+									<div class="skill-header-info">
+										<span class="skill-category">FRONTEND</span>
+										<h4 class="skill-name">React</h4>
+									</div>
+								</div>
+								
+								<div class="card-progress-row">
+									<div class="progress-bar-track">
+										<div class="progress-bar-fill"></div>
+									</div>
+									<span class="skill-percentage">85%</span>
+								</div>
+								
+								<div class="card-footer-row">
+									<div class="skill-tags">
+										<span class="skill-tag">HOOKS</span>
+										<span class="skill-tag">REDUX</span>
+									</div>
+									<div class="active-indicator">
+										<span class="indicator-dot"></span>
+										<span class="indicator-text">ACTIVE</span>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>CSS3</h3>
-						<div class="progress">
-							<div class="progress-bar color-4" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-								aria-valuemax="100" style="width:95%">
-								<span>95%</span>
+
+						<!-- Skill 3: HTML5 -->
+						<div class="col-md-4 col-6 mb-3 d-flex ftco-animate" id="card-html5">
+							<div class="skill-card" style="--skill-color: 227, 79, 38; --skill-pct: 95%;">
+								<div class="card-corner tl"></div>
+								<div class="card-corner br"></div>
+								<span class="card-index">03</span>
+								
+								<div class="card-header-row">
+									<div class="skill-logo-box">
+										<div class="skill-logo skill-logo-html5">
+											<svg viewBox="0 0 512 512">
+												<path fill="#e34f26" d="M104.6 47.7h302.8l-27.5 308.8-123.9 34.3-123.9-34.3z"/>
+												<path fill="#f06529" d="M256 79.5v276.9l99.3-27.5 21.8-245.1z"/>
+												<path fill="#ebebeb" d="M256 169.5h-50.6l-3.5-39.2h54.1V99.5h-89.8l10.5 117.8H256zm0 98.9l-.2.1-45.2-12.2-2.9-32.4h-30.8l5.7 63.8 73.2 20.3z"/>
+												<path fill="#ffffff" d="M256 169.5V130h50.6l-4.7 53H256zm0 98.9v35.8l73.2-20.3 9.6-107.9h-30.8l-5.7 63.8z"/>
+											</svg>
+										</div>
+										<span class="logo-dot"></span>
+									</div>
+									<div class="skill-header-info">
+										<span class="skill-category">FRONTEND</span>
+										<h4 class="skill-name">HTML5</h4>
+									</div>
+								</div>
+								
+								<div class="card-progress-row">
+									<div class="progress-bar-track">
+										<div class="progress-bar-fill"></div>
+									</div>
+									<span class="skill-percentage">95%</span>
+								</div>
+								
+								<div class="card-footer-row">
+									<div class="skill-tags">
+										<span class="skill-tag">SEMANTIC</span>
+										<span class="skill-tag">A11Y</span>
+									</div>
+									<div class="active-indicator">
+										<span class="indicator-dot"></span>
+										<span class="indicator-text">ACTIVE</span>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Django</h3>
-						<div class="progress">
-							<div class="progress-bar color-5" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-								aria-valuemax="100" style="width:90%">
-								<span>90%</span>
+
+						<!-- Skill 4: CSS3 -->
+						<div class="col-md-4 col-6 mb-3 d-flex ftco-animate" id="card-css3">
+							<div class="skill-card" style="--skill-color: 33, 150, 243; --skill-pct: 95%;">
+								<div class="card-corner tl"></div>
+								<div class="card-corner br"></div>
+								<span class="card-index">04</span>
+								
+								<div class="card-header-row">
+									<div class="skill-logo-box">
+										<div class="skill-logo skill-logo-css3">
+											<svg viewBox="0 0 512 512">
+												<path fill="#11538c" d="M104.6 47.7h302.8l-27.5 308.8-123.9 34.3-123.9-34.3z"/>
+												<path fill="#2087e2" d="M256 79.5v276.9l99.3-27.5 21.8-245.1z"/>
+												<path fill="#ebebeb" d="M256 222.5h-79.6l3.5 39.2H256v30.8l-45.2-12.2-2.9-32.4h-30.8l5.7 63.8 73.2 20.3zM256 130h-89.8l3.5 39.2H256z"/>
+												<path fill="#ffffff" d="M256 222.5V130h89.8l-3.5 39.2H256v53.3h53.5l-5 55.7-48.5 13.1v30.8l73.2-20.3 9.6-107.9H256z"/>
+											</svg>
+										</div>
+										<span class="logo-dot"></span>
+									</div>
+									<div class="skill-header-info">
+										<span class="skill-category">FRONTEND</span>
+										<h4 class="skill-name">CSS3</h4>
+									</div>
+								</div>
+								
+								<div class="card-progress-row">
+									<div class="progress-bar-track">
+										<div class="progress-bar-fill"></div>
+									</div>
+									<span class="skill-percentage">95%</span>
+								</div>
+								
+								<div class="card-footer-row">
+									<div class="skill-tags">
+										<span class="skill-tag">GRID</span>
+										<span class="skill-tag">MOTION</span>
+									</div>
+									<div class="active-indicator">
+										<span class="indicator-dot"></span>
+										<span class="indicator-text">ACTIVE</span>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Fast API</h3>
-						<div class="progress">
-							<div class="progress-bar color-6" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-								aria-valuemax="100" style="width:85%">
-								<span>85%</span>
+
+						<!-- Skill 5: Django -->
+						<div class="col-md-4 col-6 mb-3 d-flex ftco-animate" id="card-django">
+							<div class="skill-card" style="--skill-color: 9, 162, 105; --skill-pct: 90%;">
+								<div class="card-corner tl"></div>
+								<div class="card-corner br"></div>
+								<span class="card-index">05</span>
+								
+								<div class="card-header-row">
+									<div class="skill-logo-box">
+										<div class="skill-logo skill-logo-django">
+											<svg viewBox="0 0 24 24">
+												<rect width="24" height="24" rx="5" fill="#092e20"/>
+												<text x="12" y="17" font-family="'Poppins', sans-serif" font-weight="900" font-size="12" fill="#09a269" text-anchor="middle">Dj</text>
+											</svg>
+										</div>
+										<span class="logo-dot"></span>
+									</div>
+									<div class="skill-header-info">
+										<span class="skill-category">BACKEND</span>
+										<h4 class="skill-name">Django</h4>
+									</div>
+								</div>
+								
+								<div class="card-progress-row">
+									<div class="progress-bar-track">
+										<div class="progress-bar-fill"></div>
+									</div>
+									<span class="skill-percentage">90%</span>
+								</div>
+								
+								<div class="card-footer-row">
+									<div class="skill-tags">
+										<span class="skill-tag">ORM</span>
+										<span class="skill-tag">DRF</span>
+									</div>
+									<div class="active-indicator">
+										<span class="indicator-dot"></span>
+										<span class="indicator-text">ACTIVE</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Skill 6: FastAPI -->
+						<div class="col-md-4 col-6 mb-3 d-flex ftco-animate" id="card-fastapi">
+							<div class="skill-card" style="--skill-color: 0, 150, 136; --skill-pct: 85%;">
+								<div class="card-corner tl"></div>
+								<div class="card-corner br"></div>
+								<span class="card-index">06</span>
+								
+								<div class="card-header-row">
+									<div class="skill-logo-box">
+										<div class="skill-logo skill-logo-fastapi">
+											<svg viewBox="0 0 24 24">
+												<circle cx="12" cy="12" r="11" fill="#009688"/>
+												<path d="M11 17h4l-3-6h3l-4-5v4h-2l2 7z" fill="#fff"/>
+											</svg>
+										</div>
+										<span class="logo-dot"></span>
+									</div>
+									<div class="skill-header-info">
+										<span class="skill-category">BACKEND</span>
+										<h4 class="skill-name">FastAPI</h4>
+									</div>
+								</div>
+								
+								<div class="card-progress-row">
+									<div class="progress-bar-track">
+										<div class="progress-bar-fill"></div>
+									</div>
+									<span class="skill-percentage">85%</span>
+								</div>
+								
+								<div class="card-footer-row">
+									<div class="skill-tags">
+										<span class="skill-tag">ASYNC</span>
+										<span class="skill-tag">PYDANTIC</span>
+									</div>
+									<div class="active-indicator">
+										<span class="indicator-dot"></span>
+										<span class="indicator-text">ACTIVE</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -727,7 +1070,7 @@ ajmal = <span class="c-class">Developer</span>()
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">My Services</h2>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>SEO Optimisation</a></li>
 							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
 							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web App</a></li>
 						</ul>
@@ -889,6 +1232,186 @@ ajmal = <span class="c-class">Developer</span>()
 			setTimeout(typeLoop, 800);
 
 		})();
+	</script>
+
+	<!-- ===== SKILLS TERMINAL TYPING LOOP SCRIPT ===== -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const skillsData = [
+				{
+					id: 'rest',
+					name: 'Rest API',
+					lines: [
+						{ text: 'import rest_api', isCmd: true },
+						{ text: 'api = rest_api.Client(version="v2")', isCmd: true },
+						{ text: 'api.authenticate(token="AJ_SEC")', isCmd: true },
+						{ text: 'api.connect_endpoints()', isCmd: true },
+						{ text: 'INFO: Connection secure (200 OK)', isOutput: true, delay: 75 },
+						{ text: '✓ Rest API connected (90%)', isSuccess: true }
+					],
+					color: '168, 85, 247'
+				},
+				{
+					id: 'react',
+					name: 'React',
+					lines: [
+						{ text: 'import react', isCmd: true },
+						{ text: 'app = react.create_root("#root")', isCmd: true },
+						{ text: 'app.load_modules(lazy=True)', isCmd: true },
+						{ text: 'app.render_layout()', isCmd: true },
+						{ text: 'INFO: Mounting React UI Tree...', isOutput: true, delay: 75 },
+						{ text: '✓ React UI mounted (85%)', isSuccess: true }
+					],
+					color: '97, 218, 251'
+				},
+				{
+					id: 'html5',
+					name: 'HTML5',
+					lines: [
+						{ text: 'import html5_parser', isCmd: true },
+						{ text: 'dom = html5_parser.parse("index.html")', isCmd: true },
+						{ text: 'dom.validate_semantic_tags()', isCmd: true },
+						{ text: 'INFO: Analyzing semantic tags...', isOutput: true, delay: 60 },
+						{ text: 'INFO: Document structure validated.', isOutput: true, delay: 60 },
+						{ text: '✓ HTML5 layout loaded (95%)', isSuccess: true }
+					],
+					color: '227, 79, 38'
+				},
+				{
+					id: 'css3',
+					name: 'CSS3',
+					lines: [
+						{ text: 'import css3_compiler', isCmd: true },
+						{ text: 'css3_compiler.load_styles()', isCmd: true },
+						{ text: 'css3_compiler.compile_sass(minify=True)', isCmd: true },
+						{ text: 'INFO: Resolving flexbox & grid layers...', isOutput: true, delay: 75 },
+						{ text: 'INFO: Media queries compiled.', isOutput: true, delay: 60 },
+						{ text: '✓ CSS3 styling active (95%)', isSuccess: true }
+					],
+					color: '33, 150, 243'
+				},
+				{
+					id: 'django',
+					name: 'Django',
+					lines: [
+						{ text: 'import django', isCmd: true },
+						{ text: 'django.setup_db_migrations()', isCmd: true },
+						{ text: 'django.run_migrations(db="prod")', isCmd: true },
+						{ text: 'django.start_server(port=8000)', isCmd: true },
+						{ text: 'INFO: Server running on localhost:8000', isOutput: true, delay: 90 },
+						{ text: '✓ Django backend active (90%)', isSuccess: true }
+					],
+					color: '9, 162, 105'
+				},
+				{
+					id: 'fastapi',
+					name: 'Fast API',
+					lines: [
+						{ text: 'import fastapi', isCmd: true },
+						{ text: 'app = fastapi.FastAPI()', isCmd: true },
+						{ text: 'fastapi.load_routers(app)', isCmd: true },
+						{ text: 'fastapi.serve(app, host="0.0.0.0")', isCmd: true },
+						{ text: 'INFO: Started server worker [18492]', isOutput: true, delay: 75 },
+						{ text: '✓ FastAPI worker running (85%)', isSuccess: true }
+					],
+					color: '0, 150, 136'
+				}
+			];
+
+			const termBody = document.getElementById('terminal-body');
+			const gridWrapper = document.getElementById('skills-grid');
+			let skillIndex = 0;
+
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			async function typeText(element, text, speed = 10) {
+				for (let i = 0; i < text.length; i++) {
+					element.textContent += text[i];
+					await sleep(speed);
+				}
+			}
+
+			async function runTerminalLoop() {
+				await sleep(800);
+				
+				while (true) {
+					const skill = skillsData[skillIndex];
+					const cardEl = document.getElementById('card-' + skill.id);
+					const card = cardEl ? cardEl.querySelector('.skill-card') : null;
+
+					// Clear terminal screen before starting the new technology's code compilation
+					termBody.innerHTML = '';
+					await sleep(50);
+
+					// Print each line in the terminal
+					for (const line of skill.lines) {
+						if (line.isCmd) {
+							// Command line typing
+							const cmdLine = document.createElement('div');
+							cmdLine.className = 'term-line';
+							cmdLine.innerHTML = `<span class="term-prompt">>>> </span><span class="term-keyword">${line.text.startsWith('import') ? 'import' : ''}</span>&nbsp;<span class="term-typing-text"></span><span class="term-cursor"></span>`;
+							termBody.appendChild(cmdLine);
+							
+							const textSpan = cmdLine.querySelector('.term-typing-text');
+							const cursor = cmdLine.querySelector('.term-cursor');
+							
+							// slice out keyword if typing 'import X'
+							const textToType = line.text.startsWith('import') ? line.text.substring(7) : line.text;
+							await typeText(textSpan, textToType, 10);
+							cursor.remove();
+							await sleep(40);
+						} else if (line.isOutput) {
+							// Standard output line
+							const outLine = document.createElement('div');
+							outLine.className = 'term-line';
+							outLine.style.color = '#71717a';
+							outLine.textContent = line.text;
+							termBody.appendChild(outLine);
+							termBody.scrollTop = termBody.scrollHeight;
+							await sleep(line.delay || 75);
+						} else if (line.isSuccess) {
+							// Final success output line
+							const successLine = document.createElement('div');
+							successLine.className = 'term-output';
+							successLine.style.color = `rgb(${skill.color})`;
+							successLine.textContent = line.text;
+							termBody.appendChild(successLine);
+							
+							// Force reflow and show output
+							setTimeout(() => successLine.classList.add('show'), 15);
+							termBody.scrollTop = termBody.scrollHeight;
+							await sleep(50);
+						}
+					}
+
+					// Reveal & Activate corresponding skill card on the right
+					if (gridWrapper) gridWrapper.classList.add('has-active');
+					if (card) {
+						card.classList.add('revealed', 'active');
+					}
+
+					// Auto-scroll terminal to bottom
+					termBody.scrollTop = termBody.scrollHeight;
+
+					// Wait while card is active/glowing (made faster)
+					await sleep(800);
+
+					// Deactivate active glow/scaling, but KEEP the card revealed ('dont hide')
+					if (card) card.classList.remove('active');
+
+					// Advance index
+					skillIndex = (skillIndex + 1) % skillsData.length;
+					
+					// Wait a short time before compiling the next skill
+					await sleep(200);
+				}
+			}
+
+			// Start terminal execution loop
+			runTerminalLoop();
+		});
 	</script>
 
 </body>

@@ -1,0 +1,1163 @@
+/* CSS for Premium Animated Service Cards */
+
+/* Tighten general section vertical padding for a modern, compact layout */
+.ftco-section {
+  padding: 5.2em 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section {
+    padding: 4.2em 0 !important;
+  }
+}
+
+/* Overriding and extending existing .services-1 class */
+.services-1 {
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 16px !important;
+  padding: 30px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  height: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 30px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.services-1:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: #ffbd39 !important;
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 35px rgba(255, 189, 57, 0.12) !important;
+}
+
+/* Icon watermark styles in background */
+.services-1 .icon {
+  position: absolute !important;
+  right: 15px !important;
+  bottom: 15px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0.08 !important; /* Very low opacity watermark */
+  pointer-events: none !important;
+  z-index: 1 !important;
+  line-height: 1 !important;
+}
+
+.services-1 .icon i {
+  font-size: 80px !important; /* Large background watermark size */
+  color: #ffbd39 !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.services-1:hover .icon i {
+  color: #ffbd39 !important;
+  transform: scale(1.15) rotate(-10deg) !important;
+  opacity: 0.08 !important; /* Slightly more visible on card hover */
+}
+
+/* Heading and Underline overrides */
+.services-1 .desc {
+  width: 100%;
+}
+
+.services-1 .desc h3 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+  margin-bottom: 15px !important;
+  position: relative !important;
+  text-align: center !important; /* Center the text header */
+}
+
+.services-1 .desc h3:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #ffbd39 !important;
+  margin: 12px auto 0 !important;
+  position: static !important;
+  transition: width 0.3s ease !important;
+}
+
+.services-1:hover .desc h3 {
+  color: #fff !important;
+}
+
+.services-1:hover .desc h3:after {
+  width: 50px;
+  background: #ffbd39 !important;
+}
+
+/* Description Text */
+.services-1 .card-desc-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ========================================================
+   ANIMATION WINDOW
+   ======================================================== */
+.card-animation-area {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 25px;
+  position: relative;
+  border-radius: 10px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================================
+   1. SEO GOOGLE SEARCH ANIMATION
+   ======================================================== */
+.anim-seo-google {
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.browser-header {
+  background: #141414;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 8px;
+  height: 26px;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.browser-dots .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.browser-dots .dot.red { background: #ff5f56; }
+.browser-dots .dot.yellow { background: #ffbd2e; }
+.browser-dots .dot.green { background: #27c93f; }
+
+.browser-search-bar {
+  flex-grow: 1;
+  background: #1f1f1f;
+  border-radius: 3px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  font-size: 8px;
+  color: #777;
+  gap: 4px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.google-logo {
+  font-weight: 800;
+  font-size: 7.5px;
+  letter-spacing: -0.3px;
+  user-select: none;
+}
+
+.google-logo .blue { color: #4285F4; }
+.google-logo .red { color: #EA4335; }
+.google-logo .yellow { color: #FBBC05; }
+.google-logo .green { color: #34A853; }
+
+.search-input-mock {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search-text-typed {
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1.5px solid #ffbd39;
+  display: inline-block;
+  width: 0;
+  animation: seo-typing 8s infinite steps(16, end), seo-blink 0.75s infinite;
+  font-weight: 500;
+}
+
+.browser-content {
+  flex-grow: 1;
+  padding: 6px;
+  overflow: hidden;
+  position: relative;
+  background: #0a0a0a;
+}
+
+.search-results-mock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: seo-results-fade 8s infinite;
+  position: relative;
+  height: 100%;
+}
+
+.result-card {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  padding: 5px;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-sizing: border-box;
+}
+
+/* Position mapping during search animation */
+.result-card.rank-2 {
+  top: 0px;
+  animation: seo-rank2-move 8s infinite;
+}
+
+.result-card.ajmal-site {
+  top: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  animation: seo-ajmal-move 8s infinite;
+}
+
+.result-card.rank-3 {
+  top: 96px;
+  opacity: 0.4;
+}
+
+/* Skeletons */
+.result-url-skeleton {
+  width: 50px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 3px;
+  border-radius: 1px;
+}
+
+.result-title-skeleton {
+  width: 80px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 3px;
+  border-radius: 1px;
+}
+
+.result-snippet-skeleton {
+  width: 110px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1px;
+}
+
+/* Ajmal site styling */
+.result-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.badge-number {
+  font-size: 6.5px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #888;
+  padding: 0px 2.5px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  animation: seo-badge-gold 8s infinite;
+  display: inline-block;
+}
+
+.result-url {
+  font-size: 6px;
+  color: #00c853;
+  font-family: Arial, sans-serif;
+}
+
+.result-title {
+  font-size: 7.5px;
+  font-weight: bold;
+  color: #4285F4;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Arial, sans-serif;
+}
+
+.result-snippet {
+  font-size: 6px;
+  color: #999;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+}
+
+/* 1. SEO KEYFRAMES */
+@keyframes seo-typing {
+  0% { width: 0; }
+  18% { width: 75px; } /* Fits 'seo optimisation' typing */
+  35% { width: 75px; }
+  85% { width: 75px; }
+  92% { width: 0; }
+  100% { width: 0; }
+}
+
+@keyframes seo-blink {
+  from, to { border-color: transparent }
+  50% { border-color: #ffbd39; }
+}
+
+@keyframes seo-results-fade {
+  0% { opacity: 0; }
+  22% { opacity: 0; }
+  25% { opacity: 1; }
+  85% { opacity: 1; }
+  90% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes seo-ajmal-move {
+  0%, 25% {
+    top: 48px;
+    border-color: rgba(255, 255, 255, 0.03);
+    background: #121212;
+  }
+  42%, 85% {
+    top: 0px;
+    border-color: rgba(255, 189, 57, 0.35);
+    background: rgba(255, 189, 57, 0.03);
+    box-shadow: 0 3px 8px rgba(255, 189, 57, 0.1);
+  }
+  90%, 100% {
+    top: 48px;
+    border-color: rgba(255, 255, 255, 0.03);
+    background: #121212;
+    box-shadow: none;
+  }
+}
+
+@keyframes seo-rank2-move {
+  0%, 25% {
+    top: 0px;
+  }
+  42%, 85% {
+    top: 48px;
+  }
+  90%, 100% {
+    top: 0px;
+  }
+}
+
+@keyframes seo-badge-gold {
+  0%, 25% {
+    background: rgba(255, 255, 255, 0.08);
+    color: #888;
+  }
+  42%, 85% {
+    background: #ffbd39;
+    color: #000;
+    box-shadow: 0 0 4px rgba(255, 189, 57, 0.5);
+  }
+  90%, 100% {
+    background: rgba(255, 255, 255, 0.08);
+    color: #888;
+    box-shadow: none;
+  }
+}
+
+/* ========================================================
+   2. WEB DEVELOPER CODE EDITOR ANIMATION
+   ======================================================== */
+.anim-web-dev {
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+.editor-header {
+  background: #141414;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 10px;
+  height: 26px;
+}
+
+.editor-tab-name {
+  color: #888;
+  font-size: 7.5px;
+  font-weight: 500;
+}
+
+.editor-body {
+  flex-grow: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 7.5px;
+  line-height: 1.3;
+}
+
+.code-area {
+  color: #f8f8f2;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: 5px;
+}
+
+.code-line {
+  white-space: nowrap;
+}
+
+.code-line .c-keyword {
+  color: #ff79c6;
+}
+
+.code-line .c-func {
+  color: #50fa7b;
+}
+
+.code-line-typed {
+  color: #f1fa8c;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 0;
+  border-right: 1.5px solid #ffbd39;
+  vertical-align: bottom;
+  animation: dev-typing 8s infinite steps(16, end);
+}
+
+.terminal-area {
+  text-align: left;
+  font-size: 7px;
+  color: #6272a4;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.terminal-prompt {
+  color: #f8f8f2;
+  opacity: 0;
+  animation: dev-terminal-prompt 8s infinite;
+}
+
+.terminal-loader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0;
+  animation: dev-terminal-load 8s infinite;
+}
+
+.terminal-loader .spinner {
+  width: 6.5px;
+  height: 6.5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #ffbd39;
+  border-radius: 50%;
+  animation: dev-spin 0.8s infinite linear;
+}
+
+.terminal-success {
+  color: #50fa7b;
+  font-weight: bold;
+  opacity: 0;
+  text-shadow: 0 0 3px rgba(80, 250, 123, 0.3);
+  animation: dev-terminal-success 8s infinite;
+}
+
+/* 2. WEB DEVELOPER KEYFRAMES */
+@keyframes dev-typing {
+  0% { width: 0; }
+  22% { width: 90px; } /* Types: print("App live!") */
+  85% { width: 90px; }
+  90% { width: 0; }
+  100% { width: 0; }
+}
+
+@keyframes dev-terminal-prompt {
+  0%, 26% { opacity: 0; }
+  28%, 85% { opacity: 1; }
+  90%, 100% { opacity: 0; }
+}
+
+@keyframes dev-terminal-load {
+  0%, 36% { opacity: 0; }
+  38%, 56% { opacity: 1; }
+  58%, 100% { opacity: 0; }
+}
+
+@keyframes dev-terminal-success {
+  0%, 56% { opacity: 0; }
+  58%, 85% { opacity: 1; }
+  90%, 100% { opacity: 0; }
+}
+
+@keyframes dev-spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* ========================================================
+   3. WEB APP DASHBOARD ANIMATION
+   ======================================================== */
+.anim-web-app {
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-header {
+  background: #141414;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 10px;
+  height: 26px;
+}
+
+.dashboard-title {
+  color: #ffbd39;
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-body {
+  flex-grow: 1;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+.dash-card {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.chart-card {
+  flex: 3;
+}
+
+.metrics-card {
+  flex: 2;
+  gap: 3px;
+}
+
+.card-label {
+  font-size: 5.5px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 38px;
+  padding-top: 2px;
+}
+
+.chart-bars .bar {
+  width: 5px;
+  background: #ffbd39;
+  border-radius: 1.5px 1.5px 0 0;
+  height: 0;
+  transition: height 0.4s ease;
+}
+
+.chart-bars .bar.bar-1 { animation: app-bar1 8s infinite ease-in-out; }
+.chart-bars .bar.bar-2 { animation: app-bar2 8s infinite ease-in-out; }
+.chart-bars .bar.bar-3 { animation: app-bar3 8s infinite ease-in-out; }
+.chart-bars .bar.bar-4 { animation: app-bar4 8s infinite ease-in-out; }
+.chart-bars .bar.bar-5 { animation: app-bar5 8s infinite ease-in-out; }
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 3px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.metric-label {
+  font-size: 5px;
+  color: #555;
+}
+
+.metric-value {
+  font-size: 8px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 1px;
+}
+
+.metric-value.user-counter::after {
+  content: "0";
+  animation: app-user-count 8s infinite;
+}
+
+.metric-value.revenue-pct::after {
+  content: "+0%";
+  color: #00c853;
+  animation: app-rev-count 8s infinite;
+}
+
+.dashboard-sync {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: 3px;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 5.5px;
+  color: #888;
+  text-align: left;
+  animation: app-sync-bar 8s infinite;
+  box-sizing: border-box;
+}
+
+.sync-icon {
+  width: 6px;
+  height: 6px;
+  color: #ffbd39;
+  animation: app-sync-rotate 1.5s infinite linear;
+}
+
+/* 3. WEB APP KEYFRAMES */
+@keyframes app-bar1 { 0%, 90%, 100% { height: 0; } 18%, 85% { height: 22px; } }
+@keyframes app-bar2 { 0%, 90%, 100% { height: 0; } 20%, 85% { height: 32px; } }
+@keyframes app-bar3 { 0%, 90%, 100% { height: 0; } 22%, 85% { height: 14px; } }
+@keyframes app-bar4 { 0%, 90%, 100% { height: 0; } 24%, 85% { height: 26px; } }
+@keyframes app-bar5 { 0%, 90%, 100% { height: 0; } 26%, 85% { height: 29px; } }
+
+@keyframes app-user-count {
+  0%, 8% { content: "128"; }
+  20% { content: "342"; }
+  40% { content: "567"; }
+  60% { content: "789"; }
+  80%, 100% { content: "942"; }
+}
+
+@keyframes app-rev-count {
+  0%, 12% { content: "+4%"; }
+  32% { content: "+18%"; }
+  58% { content: "+32%"; }
+  80%, 100% { content: "+48%"; }
+}
+
+@keyframes app-sync-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes app-sync-bar {
+  0%, 38% {
+    border-color: rgba(255, 255, 255, 0.02);
+  }
+  48%, 85% {
+    border-color: rgba(80, 250, 123, 0.25);
+    background: rgba(80, 250, 123, 0.02);
+  }
+  90%, 100% {
+    border-color: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.01);
+  }
+}
+
+/* ========================================================
+   SKILLS REDESIGN CARD STYLES (SQUARE CARDS)
+   ======================================================== */
+.skill-card {
+  width: 100% !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(var(--skill-color), 0.12) !important;
+  background: rgba(10, 10, 18, 0.55) !important; /* Sleek dark glass background matching screenshot */
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 18px 18px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin-bottom: 20px !important;
+  gap: 14px !important;
+  
+  /* Start at low opacity: visible but faint until compiled */
+  opacity: 0.15 !important;
+  transform: scale(0.95) translateY(5px);
+  pointer-events: none;
+}
+
+/* Revealed state (triggered by JavaScript terminal loop) */
+.skill-card.revealed {
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Hover and active states */
+.skill-card:hover,
+.skill-card.active {
+  border-color: rgba(var(--skill-color), 0.45) !important;
+  background: rgba(10, 10, 18, 0.65) !important;
+  box-shadow: 0 8px 25px rgba(var(--skill-color), 0.18) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Brackets/indicators at corners */
+.card-corner {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-color: rgba(var(--skill-color), 0.6);
+  border-style: solid;
+  pointer-events: none;
+}
+.card-corner.tl {
+  top: 6px;
+  left: 6px;
+  border-width: 1px 0 0 1px;
+}
+.card-corner.br {
+  bottom: 6px;
+  right: 6px;
+  border-width: 0 1px 1px 0;
+}
+
+/* Card index */
+.card-index {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.12);
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+.skill-card.active .card-index,
+.skill-card:hover .card-index {
+  color: rgba(var(--skill-color), 0.35);
+}
+
+/* Header Row layout */
+.card-header-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+/* Logo Box styling */
+.skill-logo-box {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.skill-logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(var(--skill-color), 0.25) !important;
+  z-index: 2 !important;
+  transition: all 0.3s ease !important;
+}
+.skill-card:hover .skill-logo,
+.skill-card.active .skill-logo {
+  background: rgba(var(--skill-color), 0.08) !important;
+  border-color: rgba(var(--skill-color), 0.6) !important;
+}
+
+.skill-logo svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.logo-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(var(--skill-color));
+  border: 1px solid #000;
+}
+
+/* Header Info */
+.skill-header-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+}
+
+.skill-category {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  font-family: 'Poppins', sans-serif !important;
+  line-height: 1 !important;
+  margin-bottom: 3px !important;
+}
+
+.skill-name {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Progress Row Layout */
+.card-progress-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 2px 0 !important;
+}
+
+.progress-bar-track {
+  flex-grow: 1 !important;
+  height: 6px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.progress-bar-fill {
+  width: 0% !important;
+  height: 100% !important;
+  border-radius: 10px !important;
+  background: rgb(var(--skill-color)) !important;
+  transition: width 1.8s cubic-bezier(0.1, 0.8, 0.25, 1) !important;
+}
+.skill-card.revealed .progress-bar-fill {
+  width: var(--skill-pct) !important;
+}
+
+.skill-percentage {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: rgb(var(--skill-color)) !important;
+  font-family: 'Poppins', sans-serif !important;
+  min-width: 32px !important;
+  text-align: right !important;
+  line-height: 1 !important;
+}
+
+/* Footer Row Layout */
+.card-footer-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-top: 2px !important;
+}
+
+.skill-tags {
+  display: flex !important;
+  gap: 6px !important;
+}
+
+.skill-tag {
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  color: rgba(var(--skill-color), 0.85) !important;
+  border: 1px solid rgba(var(--skill-color), 0.25) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  background: rgba(var(--skill-color), 0.02) !important;
+  letter-spacing: 0.5px !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: uppercase !important;
+}
+.skill-card:hover .skill-tag,
+.skill-card.active .skill-tag {
+  background: rgba(var(--skill-color), 0.06) !important;
+  border-color: rgba(var(--skill-color), 0.45) !important;
+}
+
+/* Active indicator */
+.active-indicator {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  opacity: 0.06 !important;
+  transition: opacity 0.4s ease !important;
+}
+.skill-card.active .active-indicator {
+  opacity: 0.95 !important;
+}
+.indicator-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: rgb(var(--skill-color)) !important;
+}
+.skill-card.active .indicator-dot {
+  box-shadow: 0 0 6px rgb(var(--skill-color)) !important;
+  animation: indicator-pulse 1.2s infinite ease-in-out !important;
+}
+.indicator-text {
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  color: rgb(var(--skill-color)) !important;
+  font-family: 'Poppins', sans-serif !important;
+  letter-spacing: 0.5px !important;
+}
+
+@keyframes indicator-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767.98px) {
+  .skill-card {
+    padding: 12px 10px !important;
+    gap: 10px !important;
+    margin-bottom: 15px !important;
+  }
+  .skill-logo {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 8px !important;
+  }
+  .skill-logo svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .skill-name {
+    font-size: 12px !important;
+  }
+  .skill-tag {
+    font-size: 8px !important;
+    padding: 1px 4px !important;
+  }
+  .skill-percentage {
+    font-size: 10px !important;
+  }
+}
+
+/* ========================================================
+   SKILLS PYTHON TERMINAL (skills.py) STYLE
+   ======================================================== */
+.skills-terminal {
+  width: 100%;
+  height: 300px;
+  background: #09090b !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35) !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+.terminal-header {
+  background: #141416;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 12px;
+  height: 38px;
+}
+
+.terminal-title {
+  color: #a1a1aa;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.terminal-body {
+  flex-grow: 1;
+  padding: 16px;
+  color: #f4f4f5;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.term-line {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.term-prompt {
+  color: #ffbd39;
+  font-weight: bold;
+}
+
+.term-keyword {
+  color: #ff79c6;
+}
+
+.term-text {
+  color: #f1fa8c;
+}
+
+.term-output {
+  margin: 0;
+  padding-left: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.term-output.show {
+  opacity: 1;
+}
+
+.term-cursor {
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  background: #ffbd39;
+  margin-left: 2px;
+  animation: term-blink 0.8s infinite;
+}
+
+@keyframes term-blink {
+  50% { opacity: 0; }
+}
+
+/* Card Active States (Controlled by JavaScript console loop) */
+.skills-grid-wrapper {
+  transition: all 0.4s ease;
+}
+
+/* Dim other cards when a card is active */
+/* Dim other cards slightly when a card is active, but keep them clearly visible (no blur) */
+.skills-grid-wrapper.has-active .skill-card {
+  opacity: 0.85;
+  filter: none !important;
+}
+
+.skills-grid-wrapper.has-active .skill-card.active {
+  opacity: 1 !important;
+  filter: none !important;
+  border-color: rgba(var(--skill-color), 0.85) !important;
+  transform: translateY(-4px) scale(1.04) !important;
+  box-shadow: 0 10px 25px rgba(var(--skill-color), 0.25) !important;
+}
+
+
+/* ========================================================
+   MICRO-ANIMATIONS FOR LOGOS (Active or Hover)
+   ======================================================== */
+
+/* 1. React Logo Spin */
+.skill-card.active .skill-logo-react svg,
+.skill-card:hover .skill-logo-react svg {
+  animation: react-spin 6s infinite linear !important;
+}
+
+/* 2. FastAPI Lightning Flicker */
+.skill-card.active .skill-logo-fastapi svg path,
+.skill-card:hover .skill-logo-fastapi svg path {
+  animation: fastapi-flicker 1s infinite ease-in-out !important;
+}
+
+/* 3. Django Logo Text Pulse */
+.skill-card.active .skill-logo-django svg text,
+.skill-card:hover .skill-logo-django svg text {
+  animation: django-pulse 1.2s infinite ease-in-out !important;
+}
+
+/* 4. HTML5 / CSS3 Shields Scale and Pulse */
+.skill-card.active .skill-logo-html5 svg,
+.skill-card.active .skill-logo-css3 svg,
+.skill-card:hover .skill-logo-html5 svg,
+.skill-card:hover .skill-logo-css3 svg {
+  animation: shield-pulse 1.2s infinite alternate ease-in-out !important;
+}
+
+/* 5. Rest API Connector Lines Pulse */
+.skill-card.active .skill-logo-rest svg path,
+.skill-card:hover .skill-logo-rest svg path {
+  animation: rest-pulse 1.2s infinite alternate ease-in-out !important;
+}
+
+
