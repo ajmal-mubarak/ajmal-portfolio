@@ -281,7 +281,26 @@
 
 
 
-
+  // Dynamically decode obfuscated email links to prevent spam scraping
+  var decodeEmails = function() {
+    $('.obfuscated-email').each(function() {
+      var user = $(this).attr('data-user');
+      var domain = $(this).attr('data-domain');
+      if (user && domain) {
+        var email = user + '@' + domain;
+        $(this).attr('href', 'mailto:' + email);
+        
+        // Update text content safely
+        var $textNode = $(this).find('.text');
+        if ($textNode.length > 0) {
+          $textNode.text(email);
+        } else if ($(this).text().trim() === 'Contact Me') {
+          $(this).text(email);
+        }
+      }
+    });
+  };
+  decodeEmails();
 
 })(jQuery);
 

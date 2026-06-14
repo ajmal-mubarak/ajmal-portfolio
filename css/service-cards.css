@@ -1160,4 +1160,31 @@
   animation: rest-pulse 1.2s infinite alternate ease-in-out !important;
 }
 
+/* Bind skill-specific color and progress percentage variables to eliminate inline styles */
+#card-rest .skill-card {
+  --skill-color: 168, 85, 247;
+  --skill-pct: 90%;
+}
+#card-react .skill-card {
+  --skill-color: 97, 218, 251;
+  --skill-pct: 85%;
+}
+#card-html5 .skill-card {
+  --skill-color: 227, 79, 38;
+  --skill-pct: 95%;
+}
+#card-css3 .skill-card {
+  --skill-color: 33, 150, 243;
+  --skill-pct: 95%;
+}
+#card-django .skill-card {
+  --skill-color: 9, 162, 105;
+  --skill-pct: 90%;
+}
+#card-fastapi .skill-card {
+  --skill-color: 0, 150, 136;
+  --skill-pct: 85%;
+}
+
+
 

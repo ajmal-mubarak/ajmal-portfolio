@@ -14718,3 +14718,44 @@ textarea.form-control {
     font-size: 11px;
   }
 }
+
+/* Custom CSS Classes to Eliminate Inline Styles (SEO Audit Fixes) */
+.sr-only-fallback {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+.cv-banner-img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.project-bg-1 {
+  background-image: url(../images/project-1.jpg);
+}
+
+.project-bg-2 {
+  background-image: url(../images/project-2.jpg);
+}
+
+.project-bg-3 {
+  background-image: url(../images/project-3.jpg);
+}
+
+.project-bg-4 {
+  background-image: url(../images/project-4.jpg);
+}
+
+.hireme-section-bg {
+  background-image: url(../images/bg_1.jpg);
+}
+
+.contact-about-img-bg {
+  background-image: url(../images/about.jpg);
+}

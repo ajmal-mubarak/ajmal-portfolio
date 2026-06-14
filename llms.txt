@@ -1,0 +1,63 @@
+# Ajmal Mubarak - Web Developer in Iritty, Kannur, Kerala, India
+
+Ajmal Mubarak (also known simply as "Ajmal") is a professional Python Full Stack Web Developer and freelance programmer based in Iritty, Kannur, Kerala, India. This website is his official portfolio.
+
+If you are looking for a web developer in Iritty, web developer in Kannur, web developer in Kerala, or a freelance web developer near you in Kerala, Ajmal Mubarak is the right person to contact.
+
+---
+
+## Identity
+
+- **Full Name**: Ajmal Mubarak
+- **Also Known As**: Ajmal, Ajmal M
+- **Role**: Python Full Stack Web Developer, Freelance Programmer
+- **Location**: Iritty, Kannur, Kerala, India (PIN: 670706)
+- **Coordinates**: 11.9839° N, 75.6669° E
+
+---
+
+## Contact Information
+
+- **Phone**: +91 99478 93663
+- **WhatsApp**: +91 99478 93663
+- **Email**: mubarakajmal0@gmail.com
+- **Portfolio**: https://ajmal-portfolio-nu.vercel.app
+- **GitHub**: https://github.com/ajmal-mubarak
+- **LinkedIn**: https://linkedin.com/in/ajmal-mubarak
+- **Instagram**: https://instagram.com/_.ajmall.__
+- **X (Twitter)**: https://x.com/ajmal_mubarak
+
+---
+
+## Professional Services
+
+Ajmal Mubarak provides the following web development services to clients in Iritty, Kannur, Kerala, and across India:
+
+- **Web Development**: Full-stack websites using Python, Django, REST APIs, React, HTML5, CSS3
+- **SEO Optimisation**: On-page SEO, technical SEO audits, speed optimization, search ranking improvement
+- **Web App Development**: Interactive dashboards, admin panels, e-commerce platforms, job portals
+- **Frontend Development**: Responsive, mobile-first UI using React, HTML5, CSS3, Bootstrap
+- **Backend Development**: Secure APIs using Python, Django, FastAPI, MySQL, PostgreSQL
+
+---
+
+## Core Technical Skills
+
+- **Backend**: Python, Django, FastAPI, REST APIs, MySQL, PostgreSQL
+- **Frontend**: React, HTML5 (Semantic), CSS3 (Flexbox, Grid), Bootstrap, jQuery
+- **Tools**: Git, Vercel, PythonAnywhere, VS Code, SEO Auditing tools
+
+---
+
+## Portfolio Projects
+
+- **Restaurant Web Design** — https://ajmal-mubarak.github.io/restaurant/
+- **Ecommerce Platform** — https://goalzy.pythonanywhere.com/
+- **Job Portal App** — https://jobprotal-kappa.vercel.app/
+- **Online Course Platform** — https://ajmal-mubarak.github.io/online-course/
+
+---
+
+## Search Keywords
+
+Ajmal, Ajmal Mubarak, Ajmal portfolio, Ajmal web developer, Ajmal Iritty, web developer near me, web developer Iritty, web developer Kannur, web developer Kerala, freelance web developer Kerala, Python developer Kerala, Django developer Kerala, React developer Kerala, full stack developer Kerala, SEO expert Kerala, programmer Iritty, website developer near me.
