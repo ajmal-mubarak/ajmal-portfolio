@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /cv/
+
+# Block Googlebot-Image from indexing your images folder
+# This stops your images appearing in Google Images (which clutters search for your name)
+User-agent: Googlebot-Image
+Disallow: /images/
 
 # AI Crawlers - Explicitly allowed for AEO (Answer Engine Optimization)
 User-agent: GPTBot
