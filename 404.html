@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>404 — Page Not Found | Ajmal Mubarak</title>
-	<meta name="description" content="The page you're looking for doesn't exist. Return to Ajmal Mubarak's portfolio — Python Full Stack Web Developer in Kerala.">
+	<meta name="description"
+		content="The page you're looking for doesn't exist. Return to Ajmal Mubarak's portfolio — Python Full Stack Web Developer in Kerala.">
 	<meta name="robots" content="noindex, follow">
 	<link rel="canonical" href="https://ajmalmubarak.in/">
 	<link rel="icon" type="image/png" sizes="32x32" href="https://ajmalmubarak.in/images/logoico.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+		rel="stylesheet">
 	<style>
-		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
 		:root {
-			--bg:        #0d0d0d;
-			--bg-card:   #141414;
-			--border:    rgba(255,255,255,0.07);
-			--accent:    #f5a623;
-			--accent2:   #e8893d;
-			--text:      #e8e8e8;
-			--subtext:   #888;
-			--muted:     #555;
+			--bg: #0d0d0d;
+			--bg-card: #141414;
+			--border: rgba(255, 255, 255, 0.07);
+			--accent: #f5a623;
+			--accent2: #e8893d;
+			--text: #e8e8e8;
+			--subtext: #888;
+			--muted: #555;
 		}
 
 		body {
@@ -45,8 +54,8 @@
 			position: fixed;
 			inset: 0;
 			background-image:
-				linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-				linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+				linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 			background-size: 60px 60px;
 			pointer-events: none;
 			z-index: 0;
@@ -58,8 +67,8 @@
 			position: fixed;
 			inset: 0;
 			background: radial-gradient(ellipse 60% 50% at 50% 50%,
-				rgba(245,166,35,0.04) 0%,
-				transparent 70%);
+					rgba(245, 166, 35, 0.04) 0%,
+					transparent 70%);
 			pointer-events: none;
 			z-index: 0;
 		}
@@ -87,7 +96,10 @@
 			text-decoration: none;
 			transition: opacity 0.2s;
 		}
-		.brand a:hover { opacity: 0.75; }
+
+		.brand a:hover {
+			opacity: 0.75;
+		}
 
 		/* 404 Code */
 		.error-code {
@@ -96,7 +108,7 @@
 			line-height: 1;
 			letter-spacing: -0.04em;
 			color: #1c1c1c;
-			-webkit-text-stroke: 1.5px rgba(255,255,255,0.1);
+			-webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.1);
 			position: relative;
 			display: inline-block;
 			margin-bottom: 0.25rem;
@@ -107,12 +119,19 @@
 		.error-code .accent-0 {
 			color: transparent;
 			-webkit-text-stroke: 1.5px var(--accent);
-			text-shadow: 0 0 40px rgba(245,166,35,0.15);
+			text-shadow: 0 0 40px rgba(245, 166, 35, 0.15);
 		}
 
 		@keyframes subtle-lift {
-			0%,100% { transform: translateY(0); }
-			50%      { transform: translateY(-6px); }
+
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-6px);
+			}
 		}
 
 		/* Divider line */
@@ -167,10 +186,11 @@
 			background: var(--accent);
 			color: #0d0d0d;
 		}
+
 		.btn-primary:hover {
 			background: var(--accent2);
 			transform: translateY(-2px);
-			box-shadow: 0 6px 24px rgba(245,166,35,0.25);
+			box-shadow: 0 6px 24px rgba(245, 166, 35, 0.25);
 		}
 
 		.btn-outline {
@@ -178,8 +198,9 @@
 			color: var(--subtext);
 			border: 1px solid var(--border);
 		}
+
 		.btn-outline:hover {
-			border-color: rgba(245,166,35,0.4);
+			border-color: rgba(245, 166, 35, 0.4);
 			color: var(--accent);
 			transform: translateY(-2px);
 		}
@@ -198,15 +219,15 @@
 			font-size: 0.78rem;
 			padding: 0.3rem 0.75rem;
 			border-radius: 4px;
-			border: 1px solid rgba(255,255,255,0.05);
+			border: 1px solid rgba(255, 255, 255, 0.05);
 			transition: all 0.2s ease;
 			letter-spacing: 0.03em;
 		}
 
 		.quick-link:hover {
 			color: var(--accent);
-			border-color: rgba(245,166,35,0.3);
-			background: rgba(245,166,35,0.05);
+			border-color: rgba(245, 166, 35, 0.3);
+			background: rgba(245, 166, 35, 0.05);
 		}
 
 		/* Scanline bar at bottom for depth */
@@ -222,11 +243,18 @@
 
 		/* Responsive */
 		@media (max-width: 480px) {
-			.btn-group { gap: 0.6rem; }
-			.btn { padding: 0.65rem 1.2rem; font-size: 0.8rem; }
+			.btn-group {
+				gap: 0.6rem;
+			}
+
+			.btn {
+				padding: 0.65rem 1.2rem;
+				font-size: 0.8rem;
+			}
 		}
 	</style>
 </head>
+
 <body>
 
 	<div class="container">
@@ -245,21 +273,26 @@
 
 		<div class="btn-group">
 			<a href="/" class="btn btn-primary" id="btn-go-home">
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+					<polyline points="9,22 9,12 15,12 15,22" />
+				</svg>
 				Go Home
 			</a>
 			<a href="/#contact-section" class="btn btn-outline" id="btn-contact">
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+				</svg>
 				Contact Me
 			</a>
 		</div>
 
 		<div class="quick-links">
-			<a href="/#about-section"    class="quick-link" id="ql-about">About</a>
+			<a href="/#about-section" class="quick-link" id="ql-about">About</a>
 			<a href="/#projects-section" class="quick-link" id="ql-projects">Projects</a>
 			<a href="/#services-section" class="quick-link" id="ql-services">Services</a>
-			<a href="/#skills-section"   class="quick-link" id="ql-skills">Skills</a>
-			<a href="/#resume-section"   class="quick-link" id="ql-resume">Resume</a>
+			<a href="/#skills-section" class="quick-link" id="ql-skills">Skills</a>
+			<a href="/#resume-section" class="quick-link" id="ql-resume">Resume</a>
 		</div>
 
 	</div>
@@ -267,4 +300,5 @@
 	<div class="scanline"></div>
 
 </body>
+
 </html>
