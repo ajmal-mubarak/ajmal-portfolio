@@ -1,0 +1,110 @@
+/* API Development Service Animation and Styles */
+.anim-api-dev {
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+.api-header {
+    background: #141414;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 8px;
+    height: 26px;
+}
+
+.api-method-badge {
+    font-size: 7px;
+    font-weight: 800;
+    background: #27c93f;
+    color: #000;
+    padding: 1px 4px;
+    border-radius: 2px;
+    line-height: 1;
+    animation: api-pulse 2s infinite;
+}
+
+.api-endpoint-url {
+    color: #aaa;
+    font-size: 7.5px;
+    font-weight: 500;
+}
+
+.api-body {
+    flex-grow: 1;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    height: calc(100% - 26px);
+}
+
+.api-request-side,
+.api-response-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    padding: 5px;
+    text-align: left;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.api-side-title {
+    font-size: 6px;
+    color: #6272a4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.api-response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.api-status-badge {
+    font-size: 6px;
+    color: #50fa7b;
+    font-weight: bold;
+}
+
+.api-json-code {
+    margin: 0;
+    font-size: 7px;
+    color: #f8f8f2;
+    line-height: 1.25;
+    white-space: pre-wrap;
+}
+
+.api-json-code .json-val {
+    color: #f1fa8c;
+}
+
+.api-json-code .json-num {
+    color: #bd93f9;
+}
+
+@keyframes api-pulse {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}

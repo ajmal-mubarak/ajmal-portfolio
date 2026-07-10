@@ -1,0 +1,86 @@
+.skills-marquee-wrap {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+}
+
+.skills-track-outer {
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.skills-track {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    will-change: transform;
+}
+
+.skills-track--left {
+    animation: sk-left 30s linear infinite;
+}
+
+.skills-track--right {
+    animation: sk-right 25s linear infinite;
+}
+
+.skills-track--left:hover,
+.skills-track--right:hover {
+    animation-play-state: paused;
+}
+
+@keyframes sk-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes sk-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.skill-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    padding: 10px 22px 10px 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background .22s, border-color .22s, transform .22s;
+    cursor: default;
+    user-select: none;
+}
+
+.skill-pill:hover {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.35);
+    transform: scale(1.05);
+}
+
+.skill-pill svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.skill-pill span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #bbb;
+    letter-spacing: 0.03em;
+}

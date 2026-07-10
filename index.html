@@ -361,13 +361,18 @@
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/cursor.css">
 
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/apicardanimation.css">
 
 	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/projectcard.css">
+	<link rel="stylesheet" href="css/skillssection.css">
+	<link rel="stylesheet" href="css/cursor.css">
 
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
@@ -596,11 +601,12 @@ ajmal = <span class="c-class">Developer</span>()
 							in Kerala</strong>, I serve clients across Kannur, Thalassery, Vatakara, Kozhikode and all
 						of Kerala. My development workflow centers around visual excellence, semantic HTML structures,
 						technical SEO optimization, and database scalability, ensuring every site is both stunning and
-						highly search-engine friendly.</p>
+						highly search-engine friendly.
+					</p>
 					<address class="about-address"
 						style="font-style:normal;font-size:0.9rem;color:var(--color-subtext,#aaa);margin-top:0.5rem;">
-						<strong>Ajmal Mubarak</strong>  &mdash;  Web Developer &amp; Freelance Programmer<br>
-						Iritty, Kannur, Kerala, India  &mdash;  PIN 670706<br>
+						<strong>Ajmal Mubarak</strong> &mdash; Web Developer &amp; Freelance Programmer<br>
+						Iritty, Kannur, Kerala, India &mdash; PIN 670706<br>
 						<a href="tel:+919947893663" style="color:inherit;">+91 99478 93663</a> &nbsp;|&nbsp;
 						<a href="mailto:mubarakajmal0@gmail.com" style="color:inherit;">mubarakajmal0@gmail.com</a>
 					</address>
@@ -690,96 +696,6 @@ ajmal = <span class="c-class">Developer</span>()
 	</section>
 
 	<section class="ftco-section" id="services-section">
-		<style>
-			/* API Development Service Animation and Styles */
-			.anim-api-dev {
-				width: 100%;
-				height: 100%;
-				background: #0a0a0a;
-				display: flex;
-				flex-direction: column;
-				font-family: 'Consolas', 'Courier New', Courier, monospace;
-			}
-			.api-header {
-				background: #141414;
-				padding: 5px 8px;
-				display: flex;
-				align-items: center;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-				gap: 8px;
-				height: 26px;
-			}
-			.api-method-badge {
-				font-size: 7px;
-				font-weight: 800;
-				background: #27c93f;
-				color: #000;
-				padding: 1px 4px;
-				border-radius: 2px;
-				line-height: 1;
-				animation: api-pulse 2s infinite;
-			}
-			.api-endpoint-url {
-				color: #aaa;
-				font-size: 7.5px;
-				font-weight: 500;
-			}
-			.api-body {
-				flex-grow: 1;
-				padding: 8px;
-				display: flex;
-				gap: 8px;
-				height: calc(100% - 26px);
-			}
-			.api-request-side, .api-response-side {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-				gap: 4px;
-				background: rgba(255, 255, 255, 0.02);
-				border: 1px solid rgba(255, 255, 255, 0.03);
-				border-radius: 4px;
-				padding: 5px;
-				text-align: left;
-				box-sizing: border-box;
-				overflow: hidden;
-			}
-			.api-side-title {
-				font-size: 6px;
-				color: #6272a4;
-				text-transform: uppercase;
-				letter-spacing: 0.5px;
-				font-weight: bold;
-			}
-			.api-response-header {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-			.api-status-badge {
-				font-size: 6px;
-				color: #50fa7b;
-				font-weight: bold;
-			}
-			.api-json-code {
-				margin: 0;
-				font-size: 7px;
-				color: #f8f8f2;
-				line-height: 1.25;
-				white-space: pre-wrap;
-			}
-			.api-json-code .json-val {
-				color: #f1fa8c;
-			}
-			.api-json-code .json-num {
-				color: #bd93f9;
-			}
-			@keyframes api-pulse {
-				0% { opacity: 0.8; }
-				50% { opacity: 1; transform: scale(1.03); }
-				100% { opacity: 0.8; }
-			}
-		</style>
 
 		<div class="container">
 			<div class="row justify-content-center pb-5">
@@ -833,7 +749,8 @@ ajmal = <span class="c-class">Developer</span>()
 						</span>
 						<div class="desc">
 							<h3>API Development</h3>
-							<p class="card-desc-text">Designing, building, and integrating high-performance REST APIs, third-party services, and secure backend endpoints.</p>
+							<p class="card-desc-text">Designing, building, and integrating high-performance REST APIs,
+								third-party services, and secure backend endpoints.</p>
 						</div>
 					</div>
 				</div>
@@ -952,95 +869,6 @@ ajmal = <span class="c-class">Developer</span>()
 				</div>
 			</div>
 		</div>
-
-		<style>
-			.skills-marquee-wrap {
-				overflow: hidden;
-				-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
-				mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
-			}
-
-			.skills-track-outer {
-				overflow: hidden;
-				margin-bottom: 16px;
-			}
-
-			.skills-track {
-				display: flex;
-				gap: 14px;
-				width: max-content;
-				will-change: transform;
-			}
-
-			.skills-track--left {
-				animation: sk-left 30s linear infinite;
-			}
-
-			.skills-track--right {
-				animation: sk-right 25s linear infinite;
-			}
-
-			.skills-track--left:hover,
-			.skills-track--right:hover {
-				animation-play-state: paused;
-			}
-
-			@keyframes sk-left {
-				0% {
-					transform: translateX(0);
-				}
-
-				100% {
-					transform: translateX(-50%);
-				}
-			}
-
-			@keyframes sk-right {
-				0% {
-					transform: translateX(-50%);
-				}
-
-				100% {
-					transform: translateX(0);
-				}
-			}
-
-			.skill-pill {
-				display: inline-flex;
-				align-items: center;
-				gap: 10px;
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(255, 255, 255, 0.08);
-				border-radius: 50px;
-				padding: 10px 22px 10px 14px;
-				white-space: nowrap;
-				flex-shrink: 0;
-				transition: background .22s, border-color .22s, transform .22s;
-				cursor: default;
-				user-select: none;
-			}
-
-			.skill-pill:hover {
-				background: rgba(16, 185, 129, 0.08);
-				border-color: rgba(16, 185, 129, 0.35);
-				transform: scale(1.05);
-			}
-
-			.skill-pill svg {
-				width: 28px;
-				height: 28px;
-				flex-shrink: 0;
-				display: block;
-			}
-
-			.skill-pill span {
-				font-family: 'Poppins', sans-serif;
-				font-size: 0.86rem;
-				font-weight: 600;
-				color: #bbb;
-				letter-spacing: 0.03em;
-			}
-		</style>
 
 		<!-- Desktop Version: 2 Rows -->
 		<div class="skills-marquee-wrap d-none d-md-block">
@@ -1515,231 +1343,6 @@ ajmal = <span class="c-class">Developer</span>()
 		</div>
 	</section>
 	<section class="proj-card-section" id="projects-section">
-		<style>
-			.proj-card-section {
-				padding: 80px 0 60px;
-				background: transparent;
-			}
-
-			.proj-carousel-wrapper {
-				position: relative;
-				padding: 0 44px;
-				margin-top: 40px;
-			}
-
-			.proj-arrow {
-				position: absolute;
-				top: 38%;
-				transform: translateY(-50%);
-				width: 48px;
-				height: 48px;
-				border-radius: 50%;
-				border: 1.5px solid rgba(255, 255, 255, 0.18);
-				background: rgba(255, 255, 255, 0.04);
-				color: rgba(255, 255, 255, 0.25);
-				font-size: 1.3rem;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				z-index: 10;
-				outline: none;
-				user-select: none;
-				transition: background .28s, border-color .28s, color .28s, box-shadow .28s;
-				backdrop-filter: blur(6px);
-				-webkit-backdrop-filter: blur(6px);
-			}
-
-			.proj-arrow:hover {
-				background: rgba(16, 185, 129, 0.12);
-				border-color: rgba(16, 185, 129, 0.55);
-				color: #10b981;
-				box-shadow: 0 0 18px rgba(16, 185, 129, 0.22);
-			}
-
-			.proj-arrow-left {
-				left: 0;
-			}
-
-			.proj-arrow-right {
-				right: 0;
-			}
-
-			.proj-track-outer {
-				overflow: hidden;
-			}
-
-			.proj-track {
-				display: flex;
-				gap: 24px;
-				transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-				will-change: transform;
-			}
-
-			.proj-card {
-				flex: 0 0 calc((100% - 48px) / 3);
-				min-width: 0;
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(255, 255, 255, 0.08);
-				border-radius: 18px;
-				overflow: hidden;
-				transition: transform .32s, box-shadow .32s, border-color .32s;
-				cursor: pointer;
-				text-decoration: none;
-				display: block;
-				position: relative;
-			}
-
-			.proj-card:hover {
-				transform: translateY(-6px);
-				box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(16, 185, 129, 0.18);
-				border-color: rgba(16, 185, 129, 0.28);
-				text-decoration: none;
-			}
-
-			.proj-card-img-wrap {
-				overflow: hidden;
-				position: relative;
-			}
-
-			.proj-card-img {
-				width: 100%;
-				height: 210px;
-				object-fit: cover;
-				object-position: top;
-				display: block;
-				transition: transform .45s ease;
-			}
-
-			.proj-card:hover .proj-card-img {
-				transform: scale(1.04);
-			}
-
-			.proj-card-img-overlay {
-				position: absolute;
-				inset: 0;
-				background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
-				pointer-events: none;
-			}
-
-			.proj-card-body {
-				padding: 22px 22px 20px;
-			}
-
-			/* Diagonal arrow on card */
-			.proj-card-arrow {
-				position: absolute;
-				top: 20px;
-				right: 20px;
-				width: 38px;
-				height: 38px;
-				border-radius: 50%;
-				border: 1.5px solid rgba(255, 255, 255, 0.15);
-				background: rgba(255, 255, 255, 0.06);
-				color: rgba(255, 255, 255, 0.4);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				backdrop-filter: blur(6px);
-				-webkit-backdrop-filter: blur(6px);
-				transition: background .25s, border-color .25s, color .25s, transform .25s;
-				flex-shrink: 0;
-				z-index: 2;
-			}
-			.proj-card:hover .proj-card-arrow {
-				background: rgba(16, 185, 129, 0.14);
-				border-color: rgba(16, 185, 129, 0.55);
-				color: #10b981;
-				transform: rotate(0deg) scale(1.1);
-			}
-
-			.proj-card-category {
-				font-family: 'Poppins', sans-serif;
-				font-size: .68rem;
-				font-weight: 700;
-				letter-spacing: .1em;
-				text-transform: uppercase;
-				color: #10b981;
-				margin-bottom: 8px;
-				display: block;
-			}
-
-			.proj-card-title {
-				font-family: 'Poppins', sans-serif;
-				font-size: 1.08rem;
-				font-weight: 700;
-				color: #fff;
-				margin: 0 0 10px;
-				line-height: 1.35;
-				display: -webkit-box;
-				-webkit-line-clamp: 2;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-			}
-
-			.proj-card-desc {
-				font-family: 'Poppins', sans-serif;
-				font-size: .82rem;
-				color: rgba(255, 255, 255, 0.52);
-				line-height: 1.6;
-				margin: 0;
-				display: -webkit-box;
-				-webkit-line-clamp: 2;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-			}
-
-			.proj-dots {
-				display: flex;
-				justify-content: center;
-				gap: 8px;
-				margin-top: 32px;
-			}
-
-			.proj-dot {
-				width: 8px;
-				height: 8px;
-				border-radius: 50%;
-				background: rgba(255, 255, 255, 0.2);
-				cursor: pointer;
-				transition: background .25s, width .25s, border-radius .25s;
-				border: none;
-				outline: none;
-				padding: 0;
-			}
-
-			.proj-dot.active {
-				background: #10b981;
-				width: 24px;
-				border-radius: 4px;
-			}
-
-			@media (max-width: 991px) {
-				.proj-card {
-					flex: 0 0 calc((100% - 24px) / 2);
-				}
-			}
-
-			@media (max-width: 600px) {
-				.proj-card {
-					flex: 0 0 100%;
-				}
-
-				.proj-carousel-wrapper {
-					padding: 0 40px;
-				}
-
-				.proj-arrow {
-					width: 38px;
-					height: 38px;
-					font-size: 1rem;
-				}
-
-				.proj-card-img {
-					height: 160px;
-				}
-			}
-		</style>
 
 		<div class="container">
 			<div class="row justify-content-center pb-4">
@@ -1781,8 +1384,10 @@ ajmal = <span class="c-class">Developer</span>()
 								<p class="proj-card-desc">A modern, visually rich restaurant website with smooth
 									animations, online menu, and mobile-first responsive layout.</p>
 								<div class="proj-card-arrow">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-										<line x1="7" y1="17" x2="17" y2="7"/><polyline points="10 7 17 7 17 14"/>
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+										<line x1="7" y1="17" x2="17" y2="7" />
+										<polyline points="10 7 17 7 17 14" />
 									</svg>
 								</div>
 							</div>
@@ -1801,8 +1406,10 @@ ajmal = <span class="c-class">Developer</span>()
 								<p class="proj-card-desc">A full-featured ecommerce platform built with Django &amp;
 									Python &mdash; product listings, cart, checkout, and admin dashboard.</p>
 								<div class="proj-card-arrow">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-										<line x1="7" y1="17" x2="17" y2="7"/><polyline points="10 7 17 7 17 14"/>
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+										<line x1="7" y1="17" x2="17" y2="7" />
+										<polyline points="10 7 17 7 17 14" />
 									</svg>
 								</div>
 							</div>
@@ -1821,8 +1428,10 @@ ajmal = <span class="c-class">Developer</span>()
 								<p class="proj-card-desc">An interactive job portal enabling employers to post jobs and
 									candidates to apply, with smart filters and live search.</p>
 								<div class="proj-card-arrow">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-										<line x1="7" y1="17" x2="17" y2="7"/><polyline points="10 7 17 7 17 14"/>
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+										<line x1="7" y1="17" x2="17" y2="7" />
+										<polyline points="10 7 17 7 17 14" />
 									</svg>
 								</div>
 							</div>
@@ -1841,8 +1450,10 @@ ajmal = <span class="c-class">Developer</span>()
 								<p class="proj-card-desc">A clean and engaging e-learning UI with course listings,
 									instructor profiles, and a smooth enrollment flow.</p>
 								<div class="proj-card-arrow">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-										<line x1="7" y1="17" x2="17" y2="7"/><polyline points="10 7 17 7 17 14"/>
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+										stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+										<line x1="7" y1="17" x2="17" y2="7" />
+										<polyline points="10 7 17 7 17 14" />
 									</svg>
 								</div>
 							</div>
@@ -1854,69 +1465,6 @@ ajmal = <span class="c-class">Developer</span>()
 
 			<div class="proj-dots" id="projDots" role="tablist" aria-label="Project slides"></div>
 		</div>
-
-		<script>
-			(function () {
-				var track = document.getElementById('projTrack');
-				var prevBtn = document.getElementById('projPrev');
-				var nextBtn = document.getElementById('projNext');
-				var dotsWrap = document.getElementById('projDots');
-				var cards = track.querySelectorAll('.proj-card');
-				var total = cards.length;
-				var current = 0;
-				function getVisible() {
-					var w = track.parentElement.offsetWidth;
-					if (w <= 600) return 1;
-					if (w <= 991) return 2;
-					return 3;
-				}
-				function maxIndex() { return Math.max(0, total - getVisible()); }
-				function buildDots() {
-					dotsWrap.innerHTML = '';
-					var steps = maxIndex() + 1;
-					for (var i = 0; i < steps; i++) {
-						var btn = document.createElement('button');
-						btn.className = 'proj-dot' + (i === current ? ' active' : '');
-						btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-						btn.setAttribute('role', 'tab');
-						(function (idx) { btn.addEventListener('click', function () { goTo(idx); }); })(i);
-						dotsWrap.appendChild(btn);
-					}
-				}
-				function updateDots() {
-					dotsWrap.querySelectorAll('.proj-dot').forEach(function (d, i) {
-						d.classList.toggle('active', i === current);
-					});
-				}
-				function getCardWidth() { return cards.length ? cards[0].offsetWidth + 24 : 0; }
-				function goTo(idx) {
-					current = Math.max(0, Math.min(idx, maxIndex()));
-					track.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
-					updateDots();
-				}
-				prevBtn.addEventListener('click', function () { goTo(current - 1); });
-				nextBtn.addEventListener('click', function () { goTo(current + 1); });
-				document.addEventListener('keydown', function (e) {
-					if (e.key === 'ArrowLeft') goTo(current - 1);
-					if (e.key === 'ArrowRight') goTo(current + 1);
-				});
-				var startX = 0;
-				track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
-				track.addEventListener('touchend', function (e) {
-					var diff = startX - e.changedTouches[0].clientX;
-					if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-				}, { passive: true });
-				var resizeTimer;
-				window.addEventListener('resize', function () {
-					clearTimeout(resizeTimer);
-					resizeTimer = setTimeout(function () {
-						if (current > maxIndex()) current = maxIndex();
-						buildDots(); goTo(current);
-					}, 120);
-				});
-				buildDots(); goTo(0);
-			})();
-		</script>
 	</section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -2152,113 +1700,14 @@ ajmal = <span class="c-class">Developer</span>()
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
+	<script src="js/projectcard.js"></script>
 
 	<script src="js/main.js"></script>
 
 	<!-- ===== HERO PRO: Canvas Particles + Typed Text ===== -->
-	<script>
-		(function () {
 
-			/* ---- 1. CANVAS PARTICLE NETWORK ---- */
-			var canvas = document.getElementById('hero-canvas');
-			if (!canvas) return;
-			var ctx = canvas.getContext('2d');
-			var W, H, particles = [], PARTICLE_COUNT = 70, MAX_DIST = 130;
+	<script src="js/heroparticles.js"></script>
 
-			function resize() {
-				W = canvas.width = canvas.offsetWidth;
-				H = canvas.height = canvas.offsetHeight;
-			}
-
-			function Particle() {
-				this.x = Math.random() * W;
-				this.y = Math.random() * H;
-				this.vx = (Math.random() - 0.5) * 0.4;
-				this.vy = (Math.random() - 0.5) * 0.4;
-				this.r = Math.random() * 1.8 + 0.5;
-				this.alpha = Math.random() * 0.5 + 0.2;
-			}
-
-			Particle.prototype.update = function () {
-				this.x += this.vx;
-				this.y += this.vy;
-				if (this.x < 0 || this.x > W) this.vx *= -1;
-				if (this.y < 0 || this.y > H) this.vy *= -1;
-			};
-
-			function initParticles() {
-				particles = [];
-				for (var i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
-			}
-
-			function drawParticles() {
-				ctx.clearRect(0, 0, W, H);
-				for (var i = 0; i < particles.length; i++) {
-					var p = particles[i];
-					p.update();
-					ctx.beginPath();
-					ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-					ctx.fillStyle = 'rgba(16,185,129,' + p.alpha + ')';
-					ctx.fill();
-					for (var j = i + 1; j < particles.length; j++) {
-						var q = particles[j];
-						var dx = p.x - q.x, dy = p.y - q.y;
-						var dist = Math.sqrt(dx * dx + dy * dy);
-						if (dist < MAX_DIST) {
-							var opacity = (1 - dist / MAX_DIST) * 0.2;
-							ctx.beginPath();
-							ctx.moveTo(p.x, p.y);
-							ctx.lineTo(q.x, q.y);
-							ctx.strokeStyle = 'rgba(99,102,241,' + opacity + ')';
-							ctx.lineWidth = 0.8;
-							ctx.stroke();
-						}
-					}
-				}
-				requestAnimationFrame(drawParticles);
-			}
-
-			window.addEventListener('resize', function () { resize(); initParticles(); });
-			resize();
-			initParticles();
-			drawParticles();
-
-			/* ---- 2. TYPED TEXT EFFECT ---- */
-			var typedEl = document.getElementById('hero-typed');
-			if (!typedEl) return;
-
-			var phrases = [
-				'Web Apps',
-				'REST APIs',
-				'Beautiful UIs',
-				'Django Projects',
-				'React Interfaces',
-				'Full Stack Solutions'
-			];
-			var pi = 0, ci = 0, deleting = false, pauseTimer = 0;
-
-			function typeLoop() {
-				var current = phrases[pi];
-				if (pauseTimer > 0) { pauseTimer--; setTimeout(typeLoop, 60); return; }
-
-				if (!deleting) {
-					typedEl.textContent = current.slice(0, ci + 1);
-					ci++;
-					if (ci === current.length) { deleting = true; pauseTimer = 28; }
-					setTimeout(typeLoop, 90);
-				} else {
-					typedEl.textContent = current.slice(0, ci - 1);
-					ci--;
-					if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; pauseTimer = 10; }
-					setTimeout(typeLoop, 48);
-				}
-			}
-			setTimeout(typeLoop, 800);
-
-		})();
-	</script>
-
-	</script>
 
 	<!-- Entity Summary Block - Visible to crawlers, styled subtly for users -->
 	<section id="entity-summary" aria-label="Ajmal Mubarak - Web Developer Summary"
@@ -2269,23 +1718,27 @@ ajmal = <span class="c-class">Developer</span>()
 					<strong style="color:#a855f7;">Ajmal Mubarak</strong> is a Python Full Stack Web Developer and
 					freelance programmer based in
 					<strong>Iritty, Kannur, Kerala, India</strong> (PIN: 670706).
-					He is the web developer from Iritty Kerala  &mdash;  not to be confused with other people sharing the
+					He is the web developer from Iritty Kerala &mdash; not to be confused with other people sharing the
 					same name.
 					Ajmal specializes in Python, Django, FastAPI, React, REST APIs, and SEO optimization.
 					Searching for a <strong>web developer near me in Iritty</strong> or <strong>web developer Kannur
 						Kerala</strong>?
-					Contact Ajmal Mubarak: <a href="tel:+919947893663" style="color:#a855f7;">+91 99478 93663</a>  &middot; 
-					<a href="https://wa.me/919947893663" style="color:#a855f7;">WhatsApp</a>  &middot; 
+					Contact Ajmal Mubarak: <a href="tel:+919947893663" style="color:#a855f7;">+91 99478 93663</a>
+					&middot;
+					<a href="https://wa.me/919947893663" style="color:#a855f7;">WhatsApp</a> &middot;
 					<a href="mailto:mubarakajmal0@gmail.com" style="color:#a855f7;">mubarakajmal0@gmail.com</a>
 				</p>
 				<address style="font-style:normal;color:#4b5563;font-size:12px;margin-top:8px;">
-					 &copy;  2026 <strong>Ajmal Mubarak</strong>  &middot;  Web Developer  &middot;  Iritty, Kannur, Kerala 670706,
+					&copy; 2026 <strong>Ajmal Mubarak</strong> &middot; Web Developer &middot; Iritty, Kannur, Kerala
+					670706,
 					India
 				</address>
 			</div>
 		</div>
-	</section>
-
+		<!-- Custom Premium Cursor Follower -->
+		<div class="custom-cursor-dot" id="customCursorDot"></div>
+		<div class="custom-cursor-ring" id="customCursorRing"></div>
+		<script src="js/customcursor.js"></script>
 </body>
 
 </html>
