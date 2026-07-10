@@ -47,7 +47,7 @@
     animateRing();
 
     // Hover selector elements
-    var hoverSelector = 'a, h1, p, .btn, h3, .services-1, .sr-only-fallback, h2, button, [role="button"], .proj-card, .proj-dot, .skill-pill, .hero-social-link, .proj-arrow';
+    var hoverSelector = 'a, h1, p, about-avatar, .btn, h3, .services-1, .sr-only-fallback, h2, button, [role="button"], .proj-card, .proj-dot, .skill-pill, .hero-social-link, .proj-arrow';
 
     function bindHoverEvents() {
         var items = document.querySelectorAll(hoverSelector);
