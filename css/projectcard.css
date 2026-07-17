@@ -40,11 +40,21 @@
 }
 
 .proj-arrow-left {
-    left: 0;
+    left: -25px;
 }
 
 .proj-arrow-right {
-    right: 0;
+    right: -25px;
+}
+
+@media (max-width: 600px) {
+    .proj-arrow-left {
+        left: -5px;
+    }
+
+    .proj-arrow-right {
+        right: -5px;
+    }
 }
 
 .proj-track-outer {
