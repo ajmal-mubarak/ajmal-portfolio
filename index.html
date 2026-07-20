@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -372,6 +372,7 @@
 	<link rel="stylesheet" href="css/ionicons.min.css">
 	<link rel="stylesheet" href="css/projectcard.css">
 	<link rel="stylesheet" href="css/skillssection.css">
+	<link rel="stylesheet" href="css/resume-timeline.css">
 	<link rel="stylesheet" href="css/cursor.css">
 
 	<link rel="stylesheet" href="css/flaticon.css">
@@ -640,52 +641,64 @@ ajmal = <span class="c-class">Developer</span>()
 				<div class="col-md-10 heading-section text-center ftco-animate">
 					<span class="big big-2">Resume</span>
 					<h2 class="mb-4">Resume</h2>
-					<p> I am a dedicated and self-motivated developer with a strong interest in web and app
+					<p>I am a dedicated and self-motivated developer with a strong interest in web and app
 						development. I focus on writing clean, efficient code and continuously improving my
 						skills to build modern, user-friendly digital experiences.</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
 
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2024-2025</span>
+			<!-- ====== TIMELINE ====== -->
+			<div class="tl-root" id="resume-timeline">
+
+				<div class="tl-item">
+					<div class="tl-left"><div class="rm-node"></div></div>
+					<div class="rm-card" data-tl-delay="0">
+						<span class="rm-date">2025 &ndash; 2026</span>
 						<h3>Python Fullstack</h3>
-						<span class="position">SAC computer Academy Iritty</span>
-						<p class="mt-4">Completed an intensive Python Fullstack Development program where I learned to
-							build complete web applications from scratch. My training covered
-							frontend technologies, backend development with Python and Django, REST APIs, MySQL database
-							handling, and deployment basics. I also worked on practical projects that enhanced my coding
-							confidence and real-world development skills.</p>
+						<span class="rm-institution">SAC Computer Academy, Iritty</span>
+						<p class="rm-desc">Intensive Python Fullstack program covering frontend, Django backend,
+							REST APIs, MySQL &amp; deployment. Built real-world projects.</p>
+						<div class="rm-tags">
+							<span class="rm-tag">Python</span>
+							<span class="rm-tag">Django</span>
+							<span class="rm-tag">REST API</span>
+							<span class="rm-tag">MySQL</span>
+						</div>
 					</div>
-
-					<div class="resume-wrap ftco-animate">
-						<img class="cv-banner-img" loading="lazy" src="images/freespace.png" width="600" height="300"
-							alt="Freespace Learning Platform  &mdash;  SAC Computer Academy Iritty certificate banner">
-
-					</div>
-
 				</div>
-				<div class="col-md-6">
 
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2022-2024</span>
+				<div class="tl-item">
+					<div class="tl-left"><div class="rm-node"></div></div>
+					<div class="rm-card" data-tl-delay="150">
+						<span class="rm-date">2023 &ndash; 2025</span>
 						<h3>+2 Higher Secondary</h3>
-						<span class="position">GHss ulikkal</span>
-						<p class="mt-4">I completed my +2 education at GHSS Ulikkal,. This period helped me build a
-							strong foundation for my future studies and career in technology.</p>
+						<span class="rm-institution">GHSS Ulikkal</span>
+						<p class="rm-desc">Completed Higher Secondary at GHSS Ulikkal, building a strong
+							academic foundation and igniting my passion for technology.</p>
+						<div class="rm-tags">
+							<span class="rm-tag">Science</span>
+							<span class="rm-tag">Kerala Board</span>
+						</div>
 					</div>
-
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2021-2022</span>
-						<h3>10th Standard</h3>
-						<span class="position">Ghss perinkery</span>
-						<p class="mt-4">I completed my 10 education at GHSS Perinkery,. This period helped me build a
-							strong foundation for my future studies and career in technology.</p>
-					</div>
-
 				</div>
-			</div>
+
+				<div class="tl-item">
+					<div class="tl-left"><div class="rm-node"></div></div>
+					<div class="rm-card" data-tl-delay="300">
+						<span class="rm-date">2022 &ndash; 2023</span>
+						<h3>10th Standard</h3>
+						<span class="rm-institution">GHSS Perinkery</span>
+						<p class="rm-desc">Completed Secondary education at GHSS Perinkery, establishing core
+							skills and a curiosity-driven mindset for a career in technology.</p>
+						<div class="rm-tags">
+							<span class="rm-tag">Kerala Board</span>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- /.tl-root -->
+
+
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-6 text-center ftco-animate">
 					<p><a href="cv/ajmal mubarak cv.pdf" download="Ajmal_Mubarak_CV.pdf"
@@ -1739,6 +1752,40 @@ ajmal = <span class="c-class">Developer</span>()
 		<div class="custom-cursor-dot" id="customCursorDot"></div>
 		<div class="custom-cursor-ring" id="customCursorRing"></div>
 		<script src="js/customcursor.js"></script>
+		<!-- Roadmap: card fade-in + SVG wavy snake path -->
+		<script>
+			(function () {
+				/* ---- 1. Fade-in cards on scroll ---- */
+				var cards = document.querySelectorAll('#resume-timeline .rm-card');
+				if (cards.length) {
+					var cardObs = new IntersectionObserver(function (entries) {
+						entries.forEach(function (e) {
+							if (e.isIntersecting) {
+								var el = e.target;
+								var delay = parseInt(el.getAttribute('data-tl-delay') || '0', 10);
+								setTimeout(function () { el.classList.add('rm-visible'); }, delay);
+								cardObs.unobserve(el);
+							}
+						});
+					}, { threshold: 0.15 });
+					cards.forEach(function (c) { cardObs.observe(c); });
+				}
+
+				/* ---- 2. Node pop on scroll ---- */
+				var nodes = document.querySelectorAll('#resume-timeline .rm-node');
+				if (nodes.length) {
+					var nodeObs = new IntersectionObserver(function (entries) {
+						entries.forEach(function (e) {
+							if (e.isIntersecting) {
+								e.target.style.animation = 'rmNodePop 0.45s cubic-bezier(0.34,1.56,0.64,1) forwards';
+								nodeObs.unobserve(e.target);
+							}
+						});
+					}, { threshold: 0.5 });
+					nodes.forEach(function (n) { nodeObs.observe(n); });
+				}
+			})();
+		</script>
 </body>
 
 </html>

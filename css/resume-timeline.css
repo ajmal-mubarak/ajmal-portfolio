@@ -1,0 +1,153 @@
+﻿/* ============================================================
+   RESUME TIMELINE — Ajmal Mubarak Portfolio
+   Clean left-spine vertical timeline
+   ============================================================ */
+
+#resume-section { padding: 80px 0 60px; }
+
+/* ── Root container ─────────────────────────────────────── */
+.tl-root {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Single continuous vertical line */
+.tl-root::before {
+  content: '';
+  position: absolute;
+  /* tl-left is 46px wide; its center = padding(20) + 23 = 43px from root left */
+  left: 43px;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(16, 185, 129, 0.45) 8%,
+    rgba(16, 185, 129, 0.45) 92%,
+    transparent
+  );
+}
+
+/* ── Timeline item ──────────────────────────────────────── */
+.tl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.tl-item:last-child { margin-bottom: 0; }
+
+/* ── Left column (houses the dot on the line) ───────────── */
+.tl-left {
+  width: 46px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;   /* aligns dot vertically with card title area */
+}
+
+/* ── Node dot ───────────────────────────────────────────── */
+.rm-node {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.16),
+              0 0 10px rgba(16, 185, 129, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rm-node:hover {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 7px rgba(16, 185, 129, 0.13),
+              0 0 16px rgba(16, 185, 129, 0.3);
+}
+
+/* ── Card ───────────────────────────────────────────────── */
+.rm-card {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(16, 185, 129, 0.14);
+  border-radius: 12px;
+  padding: 18px 22px;
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: opacity 0.45s ease, transform 0.45s ease,
+              border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.rm-card.rm-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.rm-card:hover {
+  border-color: rgba(16, 185, 129, 0.32);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.09);
+}
+
+/* ── Card content ───────────────────────────────────────── */
+.rm-date {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #10b981;
+  margin-bottom: 5px;
+}
+.rm-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 3px;
+  line-height: 1.3;
+}
+.rm-institution {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.42);
+  margin-bottom: 9px;
+}
+.rm-desc {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.72;
+  margin: 0;
+}
+
+/* ── Tags ───────────────────────────────────────────────── */
+.rm-tags  { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.rm-tag {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.07);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 3px;
+  padding: 2px 7px;
+}
+
+/* hide residual category spans */
+.rm-category { display: none; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .tl-left { width: 36px; }
+  .tl-root::before { left: 38px; }
+  .rm-card { padding: 14px 16px; }
+  .rm-card h3 { font-size: 14px; }
+}
+
+/* ── Node pop keyframe ──────────────────────────────────── */
+@keyframes rmNodePop {
+  0%   { transform: scale(0.3); opacity: 0.4; }
+  65%  { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
