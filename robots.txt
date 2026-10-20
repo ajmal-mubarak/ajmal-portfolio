@@ -2,10 +2,12 @@ User-agent: *
 Allow: /
 Disallow: /cv/
 
-# Block Googlebot-Image from indexing your images folder
-# This stops your images appearing in Google Images (which clutters search for your name)
+# Allow profile image for Google Search and Gemini Entity Knowledge Cards
 User-agent: Googlebot-Image
-Disallow: /images/
+Allow: /images/about.jpg
+
+# LLM & AI Context File
+# LLM: https://ajmalmubarak.in/llms.txt
 
 # AI Crawlers - Explicitly allowed for AEO (Answer Engine Optimization)
 User-agent: GPTBot
