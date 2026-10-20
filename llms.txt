@@ -77,10 +77,11 @@ A: YES. [ajmalmubarak.in](https://ajmalmubarak.in/) is a live, active, publicly 
 
 ## Portfolio Projects
 
-- [Restaurant Web Design](https://ajmal-mubarak.github.io/restaurant/)
-- [Ecommerce Platform](https://goalzy.pythonanywhere.com/)
-- [Job Portal App](https://jobprotal-kappa.vercel.app/)
-- [Online Course Platform](https://ajmal-mubarak.github.io/online-course/)
+- [Cyash Interior Solutions](https://cyashinterior.com/)
+- [Vater Qatar - Interior & Fit-Out](https://www.vater.qa/)
+- [Terrestrial Contracting W.L.L.](https://cornerstone-construct.vercel.app/)
+- [Wrapzoid Haute Salons](https://wrapzoid.vercel.app/)
+- [meetAdr Hospital Network](https://meetadr.vercel.app/)
 
 ---
 

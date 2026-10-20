@@ -1,118 +1,136 @@
 (function () {
 
-    /* ---- 1. CANVAS PARTICLE NETWORK (Antigravity Static Magnet Style) ---- */
+    /* ---- 1. CANVAS INTERACTIVE LINES (Line-by-line low-opacity white) ---- */
     var canvas = document.getElementById('hero-canvas');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
-    var particles = [];
 
-    // Configured parameters matching the React Antigravity props
-    var PARTICLE_COUNT = 2000;
-    var particleSize = 2;
-    var color = 'rgba(54, 139, 159, '; // #368b9f
-    var lerpSpeed = 0.14;
-    var magnetRadius = 80;
-    var fieldStrength = 18;
-    var depthFactor = 1.5;
-    var pulseSpeed = 0.007;
-
-    // Ring parameters
-    var ringRadius = 7;
-    var minRadius, maxRadius, cX, cY;
+    var lines = [];
+    var allPoints = [];
     var W, H;
-
     var mouse = { x: -1000, y: -1000, active: false };
+
+    var LINE_SPACING = 36;       // Vertical distance between lines
+    var POINT_SPACING = 32;      // Horizontal distance between points along each line
+    var MOUSE_RADIUS = 130;      // Interaction radius
+    var MOUSE_FORCE = 38;        // Deflection strength
 
     function resize() {
         W = canvas.width = canvas.offsetWidth || window.innerWidth;
         H = canvas.height = canvas.offsetHeight || window.innerHeight;
-        cX = W / 2;
-        cY = H / 2;
-        minRadius = ringRadius * 12; // Base inner circle void
-        maxRadius = Math.max(minRadius + 200, Math.sqrt(cX * cX + cY * cY)); // Max screen distance
     }
 
-    function Particle(angle, r, variance) {
-        this.angle = angle;
-        this.baseR = r;
-        this.baseX = cX + Math.cos(angle) * r;
-        this.baseY = cY + Math.sin(angle) * r;
-        this.x = this.baseX;
-        this.y = this.baseY;
-        this.variance = variance;
-        this.z = Math.random() * depthFactor + 0.5;
-        this.pulseOffset = Math.random() * Math.PI * 2;
-        this.alpha = Math.random() * 0.5 + 0.3;
+    function Point(x, y) {
+        this.baseX = x;
+        this.baseY = y;
+        this.x = x;
+        this.y = y;
+        this.vx = 0;
+        this.vy = 0;
+        this.phase = Math.random() * Math.PI * 2;
+        this.alpha = Math.random() * 0.12 + 0.12; // Low opacity white
     }
 
-    Particle.prototype.update = function () {
+    Point.prototype.update = function (time) {
         var targetX = this.baseX;
-        var targetY = this.baseY;
+        // Subtle ambient horizontal breathing wave
+        var targetY = this.baseY + Math.sin(time * 0.0018 + this.baseX * 0.004 + this.phase) * 2;
 
-        // Magnet attraction logic (no auto-animate, entirely mouse-controlled)
         if (mouse.active) {
-            var dx = mouse.x - this.baseX;
-            var dy = mouse.y - this.baseY;
+            var dx = this.baseX - mouse.x;
+            var dy = this.baseY - mouse.y;
             var dist = Math.sqrt(dx * dx + dy * dy);
-            var activeMagnetRadius = magnetRadius * 3.5;
-            if (dist < activeMagnetRadius) {
-                var force = (activeMagnetRadius - dist) / activeMagnetRadius;
-                // Pull towards cursor based on field strength and individual variance
-                targetX = this.baseX + (dx / dist) * force * fieldStrength * 7 * this.variance;
-                targetY = this.baseY + (dy / dist) * force * fieldStrength * 7 * this.variance;
+            if (dist < MOUSE_RADIUS && dist > 0) {
+                var force = (1 - dist / MOUSE_RADIUS);
+                targetX += (dx / dist) * force * (MOUSE_FORCE * 0.4);
+                targetY += (dy / dist) * force * MOUSE_FORCE;
             }
         }
 
-        // Smooth lerp back and forth
-        this.x += (targetX - this.x) * lerpSpeed;
-        this.y += (targetY - this.y) * lerpSpeed;
+        // Smooth easing towards target
+        this.x += (targetX - this.x) * 0.12;
+        this.y += (targetY - this.y) * 0.12;
     };
 
-    function initParticles() {
-        particles = [];
-        var ringsCount = 17;
-        var particlesPerRing = Math.floor(PARTICLE_COUNT / ringsCount);
+    function initLines() {
+        lines = [];
+        allPoints = [];
 
-        for (var rIndex = 0; rIndex < ringsCount; rIndex++) {
-            // Distribute ring radii between minRadius and maxRadius
-            var ringR = minRadius + (rIndex / (ringsCount - 1)) * (maxRadius - minRadius);
+        var numLines = Math.ceil(H / LINE_SPACING) + 2;
+        var numPoints = Math.ceil((W + 80) / POINT_SPACING) + 2;
+        var startY = (H - (numLines - 1) * LINE_SPACING) / 2;
 
-            for (var pIndex = 0; pIndex < particlesPerRing; pIndex++) {
-                var angle = (pIndex / particlesPerRing) * Math.PI * 2;
-                // Add small random variations for organic alignment
-                var finalAngle = angle + (Math.random() - 0.5) * 0.04;
-                var finalR = ringR + (Math.random() - 0.5) * 12;
-                var variance = Math.random() * 2.4 + 0.5;
+        for (var i = 0; i < numLines; i++) {
+            var lineY = startY + i * LINE_SPACING;
+            var currentLine = [];
 
-                particles.push(new Particle(finalAngle, finalR, variance));
+            for (var j = 0; j < numPoints; j++) {
+                var lineX = -40 + j * POINT_SPACING;
+                var pt = new Point(lineX, lineY);
+                currentLine.push(pt);
+                allPoints.push(pt);
             }
+            lines.push(currentLine);
         }
     }
 
-    function drawParticles() {
+    function drawLines() {
         ctx.clearRect(0, 0, W, H);
+        var time = Date.now();
 
-        var pulse = Math.sin(Date.now() * pulseSpeed) * 0.2 + 0.8;
-
-        for (var i = 0; i < particles.length; i++) {
-            var p = particles[i];
-            p.update();
-
-            var finalSize = particleSize * p.z * pulse;
-            var currentAlpha = p.alpha * (Math.sin(Date.now() * 0.002 + p.pulseOffset) * 0.15 + 0.85);
-
-            // Draw circular dot
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, finalSize, 0, Math.PI * 2);
-            ctx.fillStyle = color + currentAlpha + ')';
-            ctx.fill();
+        // 1. Update all points
+        for (var p = 0; p < allPoints.length; p++) {
+            allPoints[p].update(time);
         }
-        requestAnimationFrame(drawParticles);
+
+        // 2. Draw line by line with smooth curves in low-opacity white
+        for (var l = 0; l < lines.length; l++) {
+            var line = lines[l];
+            if (line.length < 2) continue;
+
+            // Draw connecting line
+            ctx.beginPath();
+            ctx.moveTo(line[0].x, line[0].y);
+
+            for (var i = 1; i < line.length - 1; i++) {
+                var xc = (line[i].x + line[i + 1].x) / 2;
+                var yc = (line[i].y + line[i + 1].y) / 2;
+                ctx.quadraticCurveTo(line[i].x, line[i].y, xc, yc);
+            }
+            ctx.lineTo(line[line.length - 1].x, line[line.length - 1].y);
+
+            // Clean low-opacity white stroke
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.085)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Draw subtle micro-dots along the line
+            for (var j = 0; j < line.length; j++) {
+                var pt = line[j];
+                var dotAlpha = pt.alpha;
+
+                // Slightly brighten dots near the cursor
+                if (mouse.active) {
+                    var mdx = pt.x - mouse.x;
+                    var mdy = pt.y - mouse.y;
+                    var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                    if (mdist < MOUSE_RADIUS) {
+                        dotAlpha += (1 - mdist / MOUSE_RADIUS) * 0.28;
+                    }
+                }
+
+                ctx.beginPath();
+                ctx.arc(pt.x, pt.y, 1.25, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, ' + Math.min(dotAlpha, 0.45) + ')';
+                ctx.fill();
+            }
+        }
+
+        requestAnimationFrame(drawLines);
     }
 
     window.addEventListener('mousemove', function (e) {
         var rect = canvas.getBoundingClientRect();
-        // Use client position relative to canvas rect
         mouse.x = e.clientX - rect.left;
         mouse.y = e.clientY - rect.top;
         mouse.active = true;
@@ -122,10 +140,14 @@
         mouse.active = false;
     });
 
-    window.addEventListener('resize', function () { resize(); initParticles(); });
+    window.addEventListener('resize', function () {
+        resize();
+        initLines();
+    });
+
     resize();
-    initParticles();
-    drawParticles();
+    initLines();
+    drawLines();
 
     /* ---- 2. TYPED TEXT EFFECT ---- */
     var typedEl = document.getElementById('hero-typed');
